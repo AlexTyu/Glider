@@ -1,0 +1,17 @@
+include ./includes/head.jade
+
+body.employer
+
+  include ./includes/header.jade
+
+
+  section#cover
+    .container.reverse
+      .side-wrapper
+        .side-content
+          h1.white Know your candidate
+          p.sub.white We’re using machine learining, Live interview and Assesment library to evaluate candidate and blablabla
+          a.button.start Start for Free
+
+      .image(style="right: -170px;")
+        img(src="/files/developer.png")

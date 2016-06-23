@@ -1,0 +1,50 @@
+include ./includes/head.jade
+
+body.employer
+
+  .main-header(ng-app='Glider' ng-controller='header' scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
+    include ./includes/header.jade    
+    
+  section#cover
+    .container.image-at-left
+      .side-wrapper
+        .side-content
+          h1.white Know your candidate
+          p.sub.white We’re using machine learining, Live interview and Assesment library to evaluate candidate and blablabla
+          a.button.start Start for Free
+      
+      .image(style="right: -170px;")
+        img(src="/files/developer.png")
+        
+  section#Engage
+    .container.image-at-left
+      .side-wrapper
+        .side-content
+          h1 Engage best of a king
+          p.sub Engage great talent thru hiring automation, find a perfect match
+          
+          .links
+            a.icon-source Web-platforms Sourcing
+            a.icon-source Invitation system
+            a.icon-source Brand Showcase
+            a.icon-source Matching algorythm
+      
+      .image
+        img(src="/files/assesment.png" style="width: 960px;")
+    
+  section#assesment
+    //- .container.reverse
+    //-   .side-wrapper
+    //-     .side-content
+    //-       h1 Assesments
+    //-       p.sub See candidate’s way of thinking by assigning assesments from our library
+    //-       
+    //-       .links
+    //-         a.icon-source Assesment library
+    //-         a.icon-source Video assesments
+    //-         a.icon-source 14 Types of questions
+    //-   
+    //-   .image(style="right: -100px; bottom: 80px;")
+    //-     img(src="/files/assesment.png" style="width: 960px;")
+    //- 
+    

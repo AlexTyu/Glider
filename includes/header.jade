@@ -1,0 +1,35 @@
+.header-wrapper(ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}")
+  a.logo(href="/")
+    img.name(src="/files/name.svg")
+    img.symbol(src="/files/logo.svg")
+    
+  .header-links
+    a.link01.mega-link(ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()") Features
+    a.link02 For Candidate
+    a.link03 Blog
+    a.link04 Pricing
+    .header-buttons
+      a.button.signup Sign up
+      a.button.login Login
+  .menu-button(ng-click="activeMenu()")
+
+  .megamenu(ng-mouseleave="activeMegaMenu()")
+    .container
+      a.back(ng-click="activeMegaMenu()") Back to menu
+      .links-group.first
+        h3 Engagement
+        a(href="/features/assesments/live-assesment.html") Web-platforms sourcing
+        a(href="/features/assesments/live-assesment.html") Initation system
+        a(href="/features/assesments/live-assesment.html") Branding
+
+      .links-group.second
+        h3 Evaluation
+        a(href="/features/assesments/live-assesment.html") Ai Pre-evaluation
+        a(href="/features/assesments/live-assesment.html") Assesments
+        a(href="/features/assesments/live-assesment.html") Online Interview
+
+      .links-group.third
+        h3 Management
+        a(href="/features/assesments/live-assesment.html") Stages-based system
+        a(href="/features/assesments/live-assesment.html") Team management
+        a(href="/features/assesments/live-assesment.html") Interview Calendar
