@@ -1,8 +1,8 @@
 include ../includes/head.jade
 
-body.pricing
+body.pricing(ng-app='Glider', ng-controller='header')
 
-  .main-header.menu-minimized(ng-app='Glider', ng-controller='header')
+  .main-header.menu-minimized.employer
     include ../includes/header.jade
 
   section#pricing-cover

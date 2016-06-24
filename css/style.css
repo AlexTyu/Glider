@@ -1111,6 +1111,9 @@ body.candidate .unskew .out {
 /* ----------- Tablet ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-width: 0px) and (max-width: 980px) {
+  #candidate {
+    padding-top: 60px;
+  }
   .image {
     justify-content: center;
   }
@@ -1316,15 +1319,15 @@ body.pricing #pricing-cover {
   display: flex;
   justify-content: center;
 }
-ul {
+.feature-list ul {
   list-style: none;
   padding: 0 0;
 }
-ul li {
+.feature-list ul li {
   padding: 10px 0px;
   color: #2d2d2d;
 }
-ul li::before {
+.feature-list ul li::before {
   content: "";
   display: block;
   width: 30px;
@@ -1336,14 +1339,57 @@ ul li::before {
   background-repeat: no-repeat;
   background-image: url("/files/icons/check.svg");
 }
-ul li.line {
+.feature-list ul li.line {
   text-decoration: line-through;
   color: grey;
 }
-ul li.line::before {
+.feature-list ul li.line::before {
   content: "";
   display: block;
   background-image: none;
+}
+/* Employer page only */
+body.employer #cover {
+  height: 700px;
+  background: #1a2437;
+}
+body.employer #engage {
+  height: 720px;
+}
+body.employer #assesment {
+  height: 840px;
+  background: white;
+}
+/* === Media Queries === */
+/* Portrait and Landscape */
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  #cover .side-wrapper {
+    padding-top: 90px;
+  }
+  #cover .image {
+    right: 0 !important;
+  }
+  .container,
+  .container.image-at-left {
+    flex-direction: column;
+  }
+  .container .image .hero-image {
+    height: 100%;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .container .side-wrapper {
+    width: 100%;
+    height: auto;
+    align-items: baseline;
+    justify-content: center;
+    text-align: center;
+  }
+  .pricing-section.tall {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 body {
   padding: 0;
@@ -1374,6 +1420,35 @@ section.gray-bg {
   display: flex;
   justify-content: center;
 }
+.container {
+  width: 980px;
+  padding: 0 1em;
+  display: flex;
+}
+.container.image-at-left {
+  flex-direction: row-reverse;
+}
+.container.image-at-left img {
+  right: 0;
+}
+.flex-1 {
+  flex-grow: 1;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+.flex-justify-center {
+  justify-content: center;
+}
 h1 {
   font-weight: 200;
   font-size: 40px;
@@ -1396,21 +1471,12 @@ h3 {
   line-height: 48px;
   margin: 0.3em 0em;
 }
-.sub {
-  opacity: 0.5;
-}
-.white {
-  color: white;
-}
-.center {
-  text-align: center;
-}
 p {
   font-size: 16px;
   margin: 0em;
   max-width: 500px;
 }
-p.sub {
+.sub {
   opacity: 0.5;
   font-size: 20px;
   letter-spacing: 0.37px;
@@ -1418,34 +1484,11 @@ p.sub {
   margin-bottom: 2em;
   font-weight: 300;
 }
-.flex-1 {
-  flex-grow: 1;
+.white {
+  color: white;
 }
-.flex-column {
-  flex-direction: column;
-}
-.flex-row {
-  flex-direction: row;
-}
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-.flex-column-reverse {
-  flex-direction: column-reverse;
-}
-.flex-align-center {
-  align-items: center;
-}
-.container {
-  width: 980px;
-  padding: 0 1em;
-  display: flex;
-}
-.container.image-at-left {
-  flex-direction: row-reverse;
-}
-.container.image-at-left img {
-  right: 0;
+.center {
+  text-align: center;
 }
 .button {
   color: white;
@@ -1514,48 +1557,4 @@ p.sub {
   position: absolute;
   bottom: 0;
   z-index: 0;
-}
-/* Employer page only */
-body.employer #cover {
-  height: 700px;
-  background: #1a2437;
-}
-body.employer #engage {
-  height: 720px;
-}
-body.employer #assesment {
-  height: 840px;
-  background: white;
-}
-/* === Media Queries === */
-/* ----------- Tablet ----------- */
-/* Portrait and Landscape */
-@media only screen and (min-width: 0px) and (max-width: 980px) {
-  #cover .side-wrapper {
-    padding-top: 90px;
-  }
-  #cover .image {
-    right: 0 !important;
-  }
-  .container,
-  .container.image-at-left {
-    flex-direction: column;
-  }
-  .container .image .hero-image {
-    height: 100%;
-    right: 0;
-    left: 0;
-    margin: auto;
-  }
-  .container .side-wrapper {
-    width: 100%;
-    height: auto;
-    align-items: baseline;
-    justify-content: center;
-    text-align: center;
-  }
-  .pricing-section.tall {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
