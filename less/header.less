@@ -1,9 +1,5 @@
 .main-header{
 
-  &.candidate .header-links.employer{display: none;}
-  &.employer .header-links.candidate{display: none;}
-
-
   &.menu-minimized{
     .header-wrapper{
       height: 60px;
@@ -25,6 +21,15 @@
     }
   }
 }
+
+.main-header.candidate{
+  .header-wrapper{background: transparent;}
+  .header-links.employer{display: none;}
+}
+
+.main-header.candidate .header-links{background: transparent;}
+
+.main-header.employer .header-links.candidate{display: none;}
 
 .header-wrapper{
     display: flex;
@@ -97,8 +102,8 @@
           float: left;
           background-repeat: no-repeat;
           background-position: center;
-          opacity: 0.4;
-          transform: rotate(0deg);
+          opacity: 1;
+          transform: rotate(90deg);
           transition: 0.2s ease;
           background-image: url("/files/icons/arrow-right-white.svg")
 
@@ -243,9 +248,10 @@
 
       a.mega-link{
         opacity: 1;
+        color: #ffa900;
         &::before{
-        opacity: 1;
-        transform: rotate(90deg);
+        opacity: 0.5;
+        transform: rotate(0deg);
         }
       }
 

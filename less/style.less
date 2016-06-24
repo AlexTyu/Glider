@@ -1,5 +1,6 @@
 @import "header.less";
 @import "candidate.less";
+@import "feature.less";
 @import "pricing.less";
 
 
@@ -54,6 +55,18 @@ h2{
   line-height: 48px;
   margin: 0.3em 0em;
   max-width: 650px;
+}
+
+h3{
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 1.79px;
+  line-height: 48px;
+  margin: 0.3em 0em;
+}
+
+.sub{
+  opacity: 0.5;
 }
 
 .white{
@@ -225,93 +238,6 @@ body.employer{
   }
 }
 
-body.feature{
-
-  #feature-cover{
-    height: 400px;
-    background-image: url("/files/sky-bg.png");
-    background-size: cover;
-  }
-
-  .feature-header{
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-
-    a{
-      font-size: 18px;
-      display: block;
-      padding: 20px 20px 10px 20px;
-      position: relative;
-      transition: 0.3s ease;
-      cursor: pointer;
-
-      &.prev ,&.next{
-        border-right: 1px solid rgba(255, 255, 255, 0.12);
-
-        &:hover {
-          transform: translate3d(-20px, 0px, 0px);
-        }
-
-        &::before{
-          content: "";
-          display: block;
-          width: 20px;
-          height: 20px;
-          float: left;
-          background-repeat: no-repeat;
-          background-position: center;
-          opacity: 0.4;
-          transform: rotate(180deg);
-          background-image: url("/files/icons/arrow-right-white.svg")
-        }
-
-        &::after{
-          content: "Previous";
-          font-size: 14px;
-          opacity: 0.4;
-          position: absolute;
-          right: 20px;
-          top: 0px;
-        }
-      }
-
-      &.next{
-        border-left: 1px solid rgba(255, 255, 255, 0.12);
-        border-right: none;
-
-        &:hover{
-          transform: translate3d(20px, 0px, 0px);
-        }
-
-        &::before{
-          float: right;
-          transform: rotate(0deg);
-        }
-
-        &::after{
-          left: 20px;
-          right: auto;
-        }
-      }
-    }
-  }
-
-  .content{
-    background: white;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    margin-top: -100px;
-  }
-
-  .feature-section{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-}
 
 /* === Media Queries === */
 
@@ -340,7 +266,7 @@ body.feature{
 
       .image{
 
-        img{
+        .hero-image{
           height: 100%;
           right: 0;
           left: 0;

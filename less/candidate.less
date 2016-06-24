@@ -695,6 +695,85 @@ body.candidate{
 
 
   }
+}
+
+/* === Media Queries === */
+
+/* ----------- Tablet ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-width: 0px)
+  and (max-width: 980px){
 
 
+  .image{
+    justify-content: center;
+  }
+
+  .side-wrapper{
+      width: auto !important;
+  }
+
+  .iphone-cover{
+    width: 500px;
+    transform: scale(0.6);
+  }
+
+  .device-front{
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #simulator.skew{
+    transform: none;
+  }
+
+  #questions.skew{
+    transform: none;
+  }
+
+  .device{
+    opacity: 0;
+  }
+
+
+
+  #simulator, #questions{
+    transform: none;
+  }
+
+  .layer1{
+    z-index: 10000;
+    //-webkit-backdrop-filter: blur(10px);
+  }
+
+  .layer2{
+    transform: scale(0.9) translate3d(0px, 50px, 0px) !important;
+  }
+
+  .layer3{
+    transform: scale(0.8) translate3d(0px, 110px, 0px) !important;
+  }
+
+  .layer4{
+    transform: scale(0.75) translate3d(0px, 150px, 0px) !important;
+  }
+
+  .layer5{
+    transform: scale(0.4) translate3d(-1876px, -647px, 0px) !important;
+
+  }
+
+  .layer6{
+    transform: scale(0.35) translate3d(-2315px, -821px, 0px) !important;
+  }
+
+  .layer7, .layer8, .layer9, .layer10, .layer11, .layer12, .layer13, .layer14, .layer15, .layer16, .layer17, .layer18, .layer19, .layer20, .layer21, .layer22{
+    transform: scale(0.6) translate3d(-1458px, -463px, 0px) !important;
+  }
+
+  .out{
+    transform: scale(0.75) translate3d(0px, 150px, 0px) !important;
+    opacity: 0;
+  }
 }

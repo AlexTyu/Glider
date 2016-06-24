@@ -14,7 +14,7 @@ Glider.directive("scroll", function ($window) {
 })
 
 
-Glider.controller("header", function($scope) {
+Glider.controller("LSD", function($scope) {
 
 	$scope.MenuActive = false;
   $scope.MegamenuActive = false;

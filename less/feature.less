@@ -1,0 +1,132 @@
+body.feature{
+
+  #feature-cover{
+    height: 380px;
+    background-image: url("/files/sky-bg.png");
+    background-size: cover;
+  }
+
+// Feature Header
+
+  .feature-header{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    transition: 0.3s ease;
+    width: 100%;
+
+
+    .container{
+      justify-content: space-between;
+    }
+
+    h1{
+      transition: 0.3s ease-out;
+    }
+
+    a{
+      font-size: 18px;
+      display: block;
+      padding: 20px 20px 10px 20px;
+      position: relative;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &.prev ,&.next{
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+        max-width: 200px;
+        text-align: right;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        font-weight: 200;
+
+        &:hover {
+          transform: translate3d(20px, 0px, 0px);
+        }
+
+        &::before{
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          float: left;
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 0.4;
+          transform: rotate(180deg);
+          background-image: url("/files/icons/arrow-right-white.svg")
+        }
+
+        &::after{
+          content: "Previous";
+          font-size: 14px;
+          opacity: 0.4;
+          position: absolute;
+          right: 20px;
+          top: 0px;
+        }
+      }
+
+      &.next{
+        border-left: 1px solid rgba(255, 255, 255, 0.12);
+        border-right: none;
+        text-align: left;
+
+        &:hover{
+          transform: translate3d(-20px, 0px, 0px) scale(1.1);
+        }
+
+        &::before{
+          float: right;
+          transform: rotate(0deg);
+        }
+
+        &::after{
+          left: 20px;
+          right: auto;
+        }
+      }
+
+      //Feature header states
+
+
+
+    }
+
+    &.feature-header-fixed{
+      width: 100%;
+      position: fixed;
+      background: #353538;
+      top: 60px;
+      left: 0;
+
+      .prev, .next{
+        background: rgba(0, 0, 0, 0.08);
+        border: none;
+      }
+
+      h1{
+        font-size: 20px;
+        font-weight: 400;
+      }
+      a{
+      }
+    }
+
+  }
+
+  .content{
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    margin-top: -100px;
+  }
+
+  .feature-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}

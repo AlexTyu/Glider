@@ -1,8 +1,8 @@
 include ../includes/head.jade
 
-body.employer
+body.employer(ng-app='Glider' ng-controller='LSD')
 
-  div(ng-app='Glider' ng-controller='header')
+
     .main-header.employer(scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
       include ../includes/header.jade    
       
@@ -10,16 +10,17 @@ body.employer
       .container.image-at-left
         .side-wrapper
           .side-content
+            h3.white.sub Glider for Hiring
             h1.white Know your candidate
             p.sub.white We’re using machine learining, Live interview and Assesment library to evaluate candidate and blablabla
             a.button.start Start for Free
         
         .image(style="right: -170px;")
-          img(src="/files/developer.png")
+          img.hero-image(src="/files/developer.png")
           
     section#intro.white-bg
       .container
-        h2.center Worlds first ai-driven hiring platform
+        h2.center Glider – is a world-first artifitial intelligence based system
         
     section#Engage.gray-bg
       .container.image-at-left

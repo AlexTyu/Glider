@@ -1,17 +1,17 @@
 include ../../includes/head.jade
 
-body.feature
+body.feature(ng-app='Glider', ng-controller='LSD')
 
-  .main-header.menu-minimized(ng-app='Glider', ng-controller='header')
+  .main-header.employer.menu-minimized
     include ../../includes/header.jade
 
   section#feature-cover
-    .container
-      .feature-header.flex-align-center
-        a.prev.white Ai Pre-evaluation
-        h1.white.center Live Assesment
-        a.next.white Online interview
-      
+      .feature-header.flex-align-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
+        .container
+          a.prev.white Ai Pre-evaluation algoryhm
+          h1.white.center Live Assesment
+          a.next.white Online interview
+        
       
   .content-wrapper
     .container

@@ -1,8 +1,8 @@
 include ./includes/head.jade
 
-body.candidate
+body.candidate(ng-app='Glider' ng-controller='LSD')
 
-  div(ng-app='Glider' ng-controller='header')
+  
     .main-header.candidate(scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
       include ./includes/header.jade    
       
@@ -12,10 +12,9 @@ body.candidate
           .side-content
             h1.white Land the perfect job
             p.sub.white Glider is an artificial intelligence powered tool to get jobs that you will love
-            a.button.start Start for Free
         
         .image
-          .skew-toggle(ng-click="unSkew()") Отпиздяриьт
+          //- .skew-toggle(ng-click="unSkew()") Отпиздяриьт
           .iphone-cover(ng-class="{'unskew' : UnSkewed }")
             .device
             .device-front
