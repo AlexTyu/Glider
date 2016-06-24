@@ -13,15 +13,22 @@ Glider.directive("scroll", function ($window) {
     };
 })
 
+
 Glider.controller("header", function($scope) {
 
 	$scope.MenuActive = false;
   $scope.MegamenuActive = false;
+  $scope.UnSkewed = false;
+
   $scope.activeMenu = function() {
     $scope.MenuActive = !$scope.MenuActive;
   }
 
   $scope.activeMegaMenu = function() {
     $scope.MegamenuActive = !$scope.MegamenuActive;
+  }
+
+  $scope.unSkew = function() {
+    $scope.UnSkewed = !$scope.UnSkewed;
   }
 });

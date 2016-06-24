@@ -1,13 +1,16 @@
-
 var reset;
 
-$(document).on('click', '.step', function(){
-  $(this).addClass('active').siblings().removeClass('active');
-  $('#AppFeatures').attr('class','stage').addClass($(this).attr('id'));
+$(document).on('click', '.question1 .button', function(){
+  $('.question1').addClass('gone');
+  $('.question2').removeClass('hidden');
+});
+
+$(document).on('click', '.question2 .button', function(){
+  $('.question2').addClass('gone');
+  reset();
 });
 
 $(document).on('ready', function(){
-
 
   $('#simulator .card').draggable({
     drag: function() {
@@ -15,19 +18,21 @@ $(document).on('ready', function(){
       }
    });
 
+
    reset = function(){
      $('.calculating').addClass('active');
      setTimeout(function(){$('.calculating').attr('class', 'calculating gone');}, 1000);
      setTimeout(function(){
-      $('#simulator .card').removeClass('gone-right gone-left drag-right').attr('style', '').addClass('out').each(function(index, em){
+      $('#simulator .card').removeClass('gone-right gone-left drag-right going-left going-right').attr('style', '').addClass('out').each(function(index, em){
         $(em).addClass('layer'+(index+1));
       });
+      $('.question2').removeClass('gone').addClass('hidden');
+      $('.question1').removeClass('gone').addClass('hidden');
     }, 1100);
      setTimeout(function(){
        $('.calculating').removeClass('gone active');
        $('#simulator .card').removeClass('out');
-   }, 3000);
-
+   }, 1500);
  };
 
 
@@ -48,8 +53,11 @@ $(document).on('ready', function(){
               $(this).addClass('layer'+(index+1));
             });
           } else {
+            $('.calculating').addClass('active');
+            setTimeout(function(){$('.calculating').removeClass('active');}, 1000);
+            setTimeout(function(){$('.question1').removeClass('hidden');}, 1200);
 
-            reset();
+
           }
 
         }
@@ -58,4 +66,13 @@ $(document).on('ready', function(){
 
   droppableEnabler( $("#right"), "like", "gone-right" );
   droppableEnabler( $("#left"), "dislike", "gone-left" );
+ });
+
+
+
+
+ $( window ).load(function() {
+   setTimeout(function(){
+    $('#simulator .card').removeClass('out');
+ }, 300);
  });

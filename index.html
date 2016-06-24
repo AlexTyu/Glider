@@ -13,58 +13,75 @@
   <script type="text/javascript" src="//fast.fonts.net/jsapi/149c8a1a-2b2d-43f1-a389-5a9ea8aa112b.js"></script>
 </head>
 <body class="candidate">
-  <div ng-app="Glider" ng-controller="header" scroll="scroll" id="page" ng-class="{'menu-minimized':boolChangeClass}" class="main-header candidate">
-    <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
-      <div class="header-links candidate"><a href="/employer">For Employer</a></div>
-      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/" class="link02">For Candidate</a><a class="link03">Blog</a><a href="/Pricing" class="link04">Pricing</a>
-        <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
-      </div>
-      <div ng-click="activeMenu()" class="menu-button"></div>
-      <div ng-mouseleave="activeMegaMenu()" class="megamenu">
-        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back to menu</a>
-          <div class="links-group first">
-            <h3>Engagement</h3><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a><a href="/features/assesments/live-assesment.html">Initation system</a><a href="/features/assesments/live-assesment.html">Branding</a>
-          </div>
-          <div class="links-group second">
-            <h3>Evaluation</h3><a href="/features/assesments/live-assesment.html">Ai Pre-evaluation</a><a href="/features/assesments/live-assesment.html">Assesments</a><a href="/features/assesments/live-assesment.html">Online Interview</a>
-          </div>
-          <div class="links-group third">
-            <h3>Management</h3><a href="/features/assesments/live-assesment.html">Stages-based system</a><a href="/features/assesments/live-assesment.html">Team management</a><a href="/features/assesments/live-assesment.html">Interview Calendar</a>
+  <div ng-app="Glider" ng-controller="header">
+    <div scroll="scroll" id="page" ng-class="{'menu-minimized':boolChangeClass}" class="main-header candidate">
+      <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
+        <div class="header-links candidate"><a href="/employer">For Employer</a></div>
+        <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/" class="link02">For Candidate</a><a href="/Blog" class="link03">Blog</a><a href="/Pricing" class="link04">Pricing</a>
+          <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
+        </div>
+        <div ng-click="activeMenu()" class="menu-button"></div>
+        <div ng-mouseleave="activeMegaMenu()" class="megamenu">
+          <div class="container"><a ng-click="activeMegaMenu()" class="back">Back to menu</a>
+            <div class="links-group first">
+              <h3>Engagement</h3><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a><a href="/features/assesments/live-assesment.html">Initation system</a><a href="/features/assesments/live-assesment.html">Branding</a>
+            </div>
+            <div class="links-group second">
+              <h3>Evaluation</h3><a href="/features/assesments/live-assesment.html">Ai Pre-evaluation</a><a href="/features/assesments/live-assesment.html">Assesments</a><a href="/features/assesments/live-assesment.html">Online Interview</a>
+            </div>
+            <div class="links-group third">
+              <h3>Management</h3><a href="/features/assesments/live-assesment.html">Stages-based system</a><a href="/features/assesments/live-assesment.html">Team management</a><a href="/features/assesments/live-assesment.html">Interview Calendar</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <section id="candidate">
-    <div class="container image-at-left">
-      <div class="side-wrapper">
-        <div class="side-content">
-          <h1 class="white">Land the perfect job</h1>
-          <p class="sub white">Glider is an artificial intelligence powered tool to get jobs that you will love</p><a class="button start">Start for Free</a>
+    <section id="candidate">
+      <div class="container flex-row-reverse">
+        <div class="side-wrapper">
+          <div class="side-content">
+            <h1 class="white">Land the perfect job</h1>
+            <p class="sub white">Glider is an artificial intelligence powered tool to get jobs that you will love</p><a class="button start">Start for Free</a>
+          </div>
         </div>
-      </div>
-      <div class="image">
-        <div class="iphone-cover">
-          <div class="device">
+        <div class="image">
+          <div ng-click="unSkew()" class="skew-toggle">Отпиздяриьт</div>
+          <div ng-class="{'unskew' : UnSkewed }" class="iphone-cover">
+            <div class="device"></div>
+            <div class="device-front"></div>
             <div id="right">
               <div class="like-icon"></div>
             </div>
             <div id="left">
               <div class="dislike-icon"></div>
             </div>
-            <div id="simulator">
-              <div class="calculating">Calculating...</div><img src="files/toolbar.png" class="toolbar"/><img src="files/header.png" class="head"/>
+            <div id="simulator" class="skew">
+              <div class="calculating">Calculating</div><img src="files/toolbar.png" class="toolbar"/><img src="files/header.png" class="head"/>
               <div class="card layer1 job2 out"></div>
               <div class="card layer2 job out"></div>
               <div class="card layer3 job3 out"></div>
               <div class="card layer4 job4 out"></div>
-              <div class="card layer5 job5 out"></div>
-              <div class="card layer6 job6 out"></div>
-              <div class="card layer7 job7 out"></div>
+            </div>
+            <div id="questions" class="skew">
+              <div class="question1 hidden">
+                <h1>What size of company do you prefer?</h1>
+                <hr/>
+                <div class="button">Startup</div>
+                <div class="button">Medium company</div>
+                <div class="button">Big company</div>
+                <div class="button">Doesn't matter</div>
+              </div>
+              <div class="question2 hidden">
+                <h1>Whould move to another city for your new job?</h1>
+                <hr/>
+                <div class="button">Yes</div>
+                <div class="button">No</div>
+                <div class="button">I'll consider that</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </body>

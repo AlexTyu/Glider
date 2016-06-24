@@ -2,33 +2,49 @@ include ./includes/head.jade
 
 body.candidate
 
-  .main-header.candidate(ng-app='Glider' ng-controller='header' scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
-    include ./includes/header.jade    
-    
-  section#candidate
-    .container.image-at-left
-      .side-wrapper
-        .side-content
-          h1.white Land the perfect job
-          p.sub.white Glider is an artificial intelligence powered tool to get jobs that you will love
-          a.button.start Start for Free
+  div(ng-app='Glider' ng-controller='header')
+    .main-header.candidate(scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
+      include ./includes/header.jade    
       
-      .image
-        .iphone-cover
-          .device
+    section#candidate
+      .container.flex-row-reverse
+        .side-wrapper
+          .side-content
+            h1.white Land the perfect job
+            p.sub.white Glider is an artificial intelligence powered tool to get jobs that you will love
+            a.button.start Start for Free
+        
+        .image
+          .skew-toggle(ng-click="unSkew()") Отпиздяриьт
+          .iphone-cover(ng-class="{'unskew' : UnSkewed }")
+            .device
+            .device-front
             #right
               .like-icon
             #left
               .dislike-icon
 
-            #simulator
-              .calculating Calculating...
+            #simulator.skew
+              .calculating Calculating
               img.toolbar(src="files/toolbar.png")
               img.head(src="files/header.png")
               .card.layer1.job2.out
               .card.layer2.job.out
               .card.layer3.job3.out
               .card.layer4.job4.out
-              .card.layer5.job5.out
-              .card.layer6.job6.out
-              .card.layer7.job7.out
+
+            #questions.skew
+              .question1.hidden
+                  h1 What size of company do you prefer?
+                  hr
+                  .button Startup
+                  .button Medium company
+                  .button Big company
+                  .button Doesn't matter
+                  
+              .question2.hidden
+                  h1 Whould move to another city for your new job?
+                  hr
+                  .button Yes
+                  .button No
+                  .button I'll consider that
