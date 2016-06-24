@@ -1,0 +1,12 @@
+/* Employer page only */
+body.employer #cover {
+  height: 700px;
+  background: #1a2437;
+}
+body.employer #engage {
+  height: 720px;
+}
+body.employer #assesment {
+  height: 840px;
+  background: white;
+}

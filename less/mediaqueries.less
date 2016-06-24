@@ -1,0 +1,48 @@
+/* === Media Queries === */
+
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-width: 0px)
+  and (max-width: 780px){
+
+
+  #cover{
+    .side-wrapper{
+      padding-top: 90px;
+    }
+    .image{
+    right: 0 !important;
+    }
+  }
+
+  .container, .container.image-at-left{
+    flex-direction: column;
+  }
+
+  .container{
+
+    .image{
+
+      .hero-image{
+        height: 100%;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+
+    .side-wrapper{
+      width: 100%;
+      height: auto;
+      align-items: baseline;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .pricing-section.tall{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
