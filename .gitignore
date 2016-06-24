@@ -2,3 +2,7 @@ config.codekit
 *.html
 
 config.codekit
+
+*.css
+
+*.html
