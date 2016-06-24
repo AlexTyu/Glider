@@ -3,6 +3,4 @@ config.codekit
 
 config.codekit
 
-*.css
-
 *.html
