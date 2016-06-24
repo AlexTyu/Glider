@@ -4,14 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Project</title>
   <link rel="stylesheet" href="../../css/style.css"/>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+  <script src="../../js/simulator.js"></script>
   <script src="../../js/main.js"></script>
   <script type="text/javascript" src="//fast.fonts.net/jsapi/149c8a1a-2b2d-43f1-a389-5a9ea8aa112b.js"></script>
 </head>
 <body class="feature">
   <div ng-app="Glider" ng-controller="header" class="main-header menu-minimized">
-    <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
-      <div class="header-links"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a class="link02">For Candidate</a><a class="link03">Blog</a><a class="link04">Pricing</a>
+    <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
+      <div class="header-links candidate"><a href="/employer">For Employer</a></div>
+      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/" class="link02">For Candidate</a><a class="link03">Blog</a><a class="link04">Pricing</a>
         <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
       </div>
       <div ng-click="activeMenu()" class="menu-button"></div>

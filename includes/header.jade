@@ -1,11 +1,14 @@
 .header-wrapper(ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}")
-  a.logo(href="/")
+  a.logo(href="/employer")
     img.name(src="/files/name.svg")
     img.symbol(src="/files/logo.svg")
-    
-  .header-links
+  
+  .header-links.candidate
+    a(href="/employer") For Employer
+  
+  .header-links.employer
     a.link01.mega-link(ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()") Features
-    a.link02 For Candidate
+    a.link02(href="/") For Candidate
     a.link03 Blog
     a.link04 Pricing
     .header-buttons

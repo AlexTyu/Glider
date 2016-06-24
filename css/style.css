@@ -1,3 +1,9 @@
+.main-header.candidate .header-links.employer {
+  display: none;
+}
+.main-header.employer .header-links.candidate {
+  display: none;
+}
 .main-header.menu-minimized .header-wrapper {
   height: 60px;
   background: black;
@@ -76,6 +82,7 @@
   text-transform: uppercase;
   animation-duration: 0.5s;
   animation-fill-mode: both;
+  text-decoration: none;
 }
 .header-wrapper .header-links a.mega-link::before {
   content: "";
@@ -321,6 +328,113 @@
   .header-wrapper.megamenu-active .logo .name {
     opacity: 1;
   }
+}
+body.candidate #candidate {
+  background-image: url("/files/sky-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+body.candidate .iphone-cover {
+  height: 800px;
+  margin-left: 45px;
+  float: left;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.29, 0.96, 0.5, 1.02);
+}
+body.candidate .device {
+  width: 500px;
+  height: 800px;
+  position: absolute;
+  z-index: 9;
+  background: url("../files/cover-phone-bg.png");
+  background-size: auto 700px;
+  background-position: 42px 36px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+body.candidate #right {
+  position: absolute;
+  top: -200px;
+  left: 410px;
+  height: 3000px;
+  width: 1000px;
+  z-index: 1000;
+  visibility: hidden;
+  transform: rotate(-10deg);
+}
+body.candidate #right .like-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  background-color: green;
+  position: absolute;
+  top: 327px;
+  left: -46px;
+  visibility: visible;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  font-weight: 100;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  transition: 0.3s ease;
+  transform: rotate(0deg) scale(0);
+  background-image: url("../files/like.svg");
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+}
+body.candidate #left {
+  position: absolute;
+  top: 0;
+  left: -570px;
+  height: 3000px;
+  width: 1000px;
+  visibility: hidden;
+  z-index: 1000;
+  transform: rotate(-10deg);
+}
+body.candidate #left .dislike-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  background-color: #B42C2F;
+  position: absolute;
+  top: 300px;
+  right: -54px;
+  visibility: visible;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  font-weight: 100;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  transition: 0.3s ease;
+  transform: rotate(0deg) scale(0);
+  background-image: url("../files/dislike.svg");
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+}
+body.candidate #left.dislike .dislike-icon {
+  transform: rotate(-10deg) scale(1);
+}
+body.candidate #right.like .like-icon {
+  transform: rotate(-10deg) scale(1);
+}
+body.candidate #simulator {
+  width: 427px;
+  height: 766px;
+  background: transparent;
+  background-size: cover;
+  position: absolute;
+  box-sizing: border-box;
+  transform: perspective(10000px) scale(0.64) rotateX(-4.3deg) rotateY(45.7deg) rotateZ(-13.2deg);
 }
 body {
   padding: 0;

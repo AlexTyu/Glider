@@ -1,54 +1,34 @@
 include ./includes/head.jade
 
-body.employer
+body.candidate
 
-  .main-header(ng-app='Glider' ng-controller='header' scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
+  .main-header.candidate(ng-app='Glider' ng-controller='header' scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
     include ./includes/header.jade    
     
-  section#cover
+  section#candidate
     .container.image-at-left
       .side-wrapper
         .side-content
-          h1.white Know your candidate
-          p.sub.white We’re using machine learining, Live interview and Assesment library to evaluate candidate and blablabla
+          h1.white Land the perfect job
+          p.sub.white Glider is an artificial intelligence powered tool to get jobs that you will love
           a.button.start Start for Free
       
-      .image(style="right: -170px;")
-        img(src="/files/developer.png")
-        
-  section#intro.white-bg
-    .container
-      h2.center Worlds first ai-driven hiring platform
-      
-  section#Engage.gray-bg
-    .container.image-at-left
-      .side-wrapper
-        .side-content
-          h1 Engage best of a kind
-          p.sub Engage great talent thru hiring automation, find a perfect match
-          
-          .links-group
-            a.icon-source Web-platforms Sourcing
-            a.icon-source Invitation system
-            a.icon-source Brand Showcase
-            a.icon-source Matching algorythm
-      
       .image
-        img(src="/files/assesment.png" style="width: 960px;")
-    
-  section#assesment
-    //- .container.reverse
-    //-   .side-wrapper
-    //-     .side-content
-    //-       h1 Assesments
-    //-       p.sub See candidate’s way of thinking by assigning assesments from our library
-    //-       
-    //-       .links
-    //-         a.icon-source Assesment library
-    //-         a.icon-source Video assesments
-    //-         a.icon-source 14 Types of questions
-    //-   
-    //-   .image(style="right: -100px; bottom: 80px;")
-    //-     img(src="/files/assesment.png" style="width: 960px;")
-    //- 
-    
+        .iphone-cover
+          .device
+            #right
+              .like-icon
+            #left
+              .dislike-icon
+
+            #simulator
+              .calculating Calculating...
+              img.toolbar(src="files/toolbar.png")
+              img.head(src="files/header.png")
+              .card.layer1.job2.out
+              .card.layer2.job.out
+              .card.layer3.job3.out
+              .card.layer4.job4.out
+              .card.layer5.job5.out
+              .card.layer6.job6.out
+              .card.layer7.job7.out
