@@ -1284,20 +1284,25 @@ body.feature .feature-section {
   display: flex;
   justify-content: center;
 }
+body.pricing .card-container {
+  width: 980px;
+  padding: 0 1em;
+  display: flex;
+}
 body.pricing #pricing-cover {
   height: 400px;
   background-image: url("/files/sky-bg.png");
   background-size: cover;
 }
-.pricing-section {
+body.pricing .pricing-section {
   width: 100%;
   height: auto;
 }
-.pricing-section.tall {
+body.pricing .pricing-section.tall {
   margin-left: 20px;
   margin-right: 20px;
 }
-.pricing-card {
+body.pricing .pricing-card {
   background: white;
   border-radius: 8px;
   width: 100%;
@@ -1306,25 +1311,25 @@ body.pricing #pricing-cover {
   box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.06);
   border: solid 1px #e4e4e4;
 }
-.pricing-card.pro {
+body.pricing .pricing-card.pro {
   margin-top: -100px;
   height: 455px;
 }
-.feature-list {
+body.pricing .feature-list {
   margin-top: 60px;
   margin-bottom: 160px;
   display: flex;
   justify-content: center;
 }
-ul {
+body.pricing ul {
   list-style: none;
   padding: 0 0;
 }
-ul li {
+body.pricing ul li {
   padding: 10px 0px;
   color: #2d2d2d;
 }
-ul li::before {
+body.pricing ul li::before {
   content: "";
   display: block;
   width: 30px;
@@ -1336,11 +1341,11 @@ ul li::before {
   background-repeat: no-repeat;
   background-image: url("/files/icons/check.svg");
 }
-ul li.line {
+body.pricing ul li.line {
   text-decoration: line-through;
   color: grey;
 }
-ul li.line::before {
+body.pricing ul li.line::before {
   content: "";
   display: block;
   background-image: none;
