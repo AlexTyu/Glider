@@ -336,6 +336,12 @@ section {
   justify-content: center;
   overflow: hidden;
 }
+section.white-bg {
+  background: white;
+}
+section.gray-bg {
+  background: #EFEFF4;
+}
 h1 {
   font-weight: 200;
   font-size: 40px;
@@ -390,7 +396,6 @@ p.sub {
 }
 .container {
   width: 980px;
-  height: 100%;
   padding: 0 1em;
   display: flex;
 }
@@ -474,7 +479,6 @@ body.employer #cover {
   background: #1a2437;
 }
 body.employer #engage {
-  background: white;
   height: 720px;
 }
 body.employer #assesment {
