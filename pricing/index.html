@@ -1,0 +1,47 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+  <script src="../../js/main.js"></script>
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/149c8a1a-2b2d-43f1-a389-5a9ea8aa112b.js"></script>
+</head>
+<body class="pricing">
+  <div ng-app="Glider" ng-controller="header" class="main-header menu-minimized">
+    <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
+      <div class="header-links"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a class="link02">For Candidate</a><a class="link03">Blog</a><a href="/Pricing" class="link04">Pricing</a>
+        <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
+      </div>
+      <div ng-click="activeMenu()" class="menu-button"></div>
+      <div ng-mouseleave="activeMegaMenu()" class="megamenu">
+        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back to menu</a>
+          <div class="links-group first">
+            <h3>Engagement</h3><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a><a href="/features/assesments/live-assesment.html">Initation system</a><a href="/features/assesments/live-assesment.html">Branding</a>
+          </div>
+          <div class="links-group second">
+            <h3>Evaluation</h3><a href="/features/assesments/live-assesment.html">Ai Pre-evaluation</a><a href="/features/assesments/live-assesment.html">Assesments</a><a href="/features/assesments/live-assesment.html">Online Interview</a>
+          </div>
+          <div class="links-group third">
+            <h3>Management</h3><a href="/features/assesments/live-assesment.html">Stages-based system</a><a href="/features/assesments/live-assesment.html">Team management</a><a href="/features/assesments/live-assesment.html">Interview Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="pricing-cover">
+    <div class="container">
+      <div class="feature-header flex-align-center">
+        <h1 class="white center">Live Assesment</h1>
+      </div>
+    </div>
+  </section>
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="pricing-card stand"></div>
+      <div class="pricing-card pro"></div>
+      <div class="pricing-card enterp"></div>
+    </div>
+  </div>
+</body>
