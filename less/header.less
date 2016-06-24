@@ -1,5 +1,9 @@
 .main-header{
 
+  &.candidate .header-links.employer{display: none;}
+  &.employer .header-links.candidate{display: none;}
+
+
   &.menu-minimized{
     .header-wrapper{
       height: 60px;
@@ -83,6 +87,7 @@
         text-transform: uppercase;
         animation-duration: 0.5s;
         animation-fill-mode: both;
+        text-decoration: none;
 
         &.mega-link::before{
           content: "";
@@ -233,7 +238,7 @@
   }
 
   &.megamenu-active{
-    background: black; 
+    background: black;
     height: 330px !important;
 
       a.mega-link{
