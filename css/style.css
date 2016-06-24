@@ -322,11 +322,6 @@
     opacity: 1;
   }
 }
-body.pricing #pricing-cover {
-  height: 400px;
-  background-image: url("/files/sky-bg.png");
-  background-size: cover;
-}
 body {
   padding: 0;
   margin: 0;
@@ -341,10 +336,11 @@ section {
   justify-content: center;
   overflow: hidden;
 }
-.content-wrapper {
+section.white-bg {
+  background: white;
+}
+section.gray-bg {
   background: #EFEFF4;
-  display: flex;
-  justify-content: center;
 }
 h1 {
   font-weight: 200;
@@ -400,7 +396,6 @@ p.sub {
 }
 .container {
   width: 980px;
-  height: 100%;
   padding: 0 1em;
   display: flex;
 }
@@ -484,7 +479,6 @@ body.employer #cover {
   background: #1a2437;
 }
 body.employer #engage {
-  background: white;
   height: 720px;
 }
 body.employer #assesment {
@@ -553,6 +547,11 @@ body.feature .feature-header a.next::before {
 body.feature .feature-header a.next::after {
   left: 20px;
   right: auto;
+}
+body.feature .content-wrapper {
+  background: #EFEFF4;
+  display: flex;
+  justify-content: center;
 }
 body.feature .content {
   background: white;
