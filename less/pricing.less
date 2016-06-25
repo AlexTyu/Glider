@@ -1,19 +1,16 @@
 body.pricing{
 
-  .card-container{
-    width: 980px;
-    padding: 0 1em;
-    display: flex;
-  }
-
   #pricing-cover{
     height: 400px;
     background-image: url("/files/sky-bg.png");
     background-size: cover;
   }
+
   .card-container{
+    width: 980px;
+    display: flex;
     flex-direction: row;
-    
+
     .pricing-section {
       width: 100%;
       height: auto;
@@ -23,72 +20,133 @@ body.pricing{
         margin-left: 20px;
         margin-right: 20px;
       }
-    }
-  }
 
+//---- Pricing Card ----//
 
-  //---- Pricing Card ----//
+      .pricing-card {
+        background: white;
+        border-radius: 8px;
+        width: 100%;
+        height: 405px;
+        margin-top: -50px;
+        box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.06);
+        border: solid 1px #e4e4e4;
 
-
-  .pricing-card {
-    background: white;
-    border-radius: 8px;
-    width: 100%;
-    height: 405px;
-    margin-top: -50px;
-    box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.06);
-    border: solid 1px #e4e4e4;
-
-    &.pro{
-      margin-top: -100px;
-      height: 455px;
-    }
-  }
-
-
-  //---- Feature List ----//
-
-  .feature-list{
-    margin-top:60px;
-    margin-bottom: 160px;
-    display: flex;
-    justify-content: center;
-  }
-
-  ul{
-    list-style: none;
-    padding: 0 0;
-
-    li{
-      padding: 10px 0px;
-      color: #2d2d2d;
-
-      &::before{
-        content: "";
-        display: block;
-        width: 30px;
-        height: 30px;
-        float: left;
-        margin-top: -6px;
-        margin-right: 18px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url("/files/icons/check.svg")
+        &.pro{
+          margin-top: -100px;
+          height: 455px;
+        }
       }
 
-      &.line{
-        text-decoration: line-through;
-        color:grey;
+//---- Feature List ----//
 
-        &::before{
-          content: "";
-          display: block;
-          background-image: none;
+      .pricing-features{
+        margin-top:60px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+
+        ul{
+          list-style: none;
+          padding: 0 0;
+
+          li{
+            padding: 10px 0px;
+            color: #2d2d2d;
+
+            &::before{
+              content: "";
+              display: block;
+              width: 30px;
+              height: 30px;
+              float: left;
+              margin-top: -6px;
+              margin-right: 18px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-image: url("/files/icons/check.svg")
+            }
+
+            &.line{
+              text-decoration: line-through;
+              color:grey;
+
+              &::before{
+                content: "";
+                display: block;
+                background-image: none;
+              }
+            }
+          }
         }
       }
     }
   }
 
-}
+// --- FAQ --- //
 
-//---- Feature List ----//
+  .faq-container{
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    border: solid 1px #e4e4e4;
+
+    .faq-top{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: url(//res.cloudinary.com/glider/image/upload/glider/cover2.jpg);
+      background-size: cover;
+      height: 450px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      .side-content{
+        .apps{
+          display: flex;
+
+           a.ios{
+            display: block;
+            background: url(//res.cloudinary.com/glider/image/upload/glider/applestore.png);
+            width: 165px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 50px;
+            }
+           a.android{
+             display: block;
+             background: url(//res.cloudinary.com/glider/image/upload/glider/googleplay.png);
+             width: 150px;
+             background-size: contain;
+             background-repeat: no-repeat;
+             height: 52px;
+            }
+         }
+       }
+
+      .image{
+        img{
+          right: 86px;
+          margin-bottom: -30px;
+        }
+      }
+    }
+    .faq-bottom{
+      width: 100%;
+      //display: flex;
+      justify-content: center;
+
+      .title{
+        flex:none;
+        margin-top: 60px;
+        padding: 0 1em;
+      }
+      .wrap-container{
+        display: flex;
+        flex-direction: row;
+      }
+
+    }
+  }
+}
