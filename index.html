@@ -16,12 +16,12 @@
   <div scroll="scroll" id="page" ng-class="{'menu-minimized':boolChangeClass}" class="main-header candidate">
     <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
       <div class="header-links candidate"><a href="/employer">Hiring?</a></div>
-      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/Pricing" class="link04">Pricing</a><a href="/" class="link02">For Candidate</a>
-        <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
+      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/Pricing" class="link02">Pricing</a><a href="/" class="link03">For Candidate</a>
+        <div class="header-buttons"><a class="button signup link04">Sign up</a><a class="button login link04">Login</a></div>
       </div>
-      <div ng-click="activeMenu()" class="menu-button"></div>
+      <div ng-click="activeMenu(); MegamenuActive = false" class="menu-button"></div>
       <div ng-mouseleave="activeMegaMenu()" class="megamenu">
-        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back to menu</a>
+        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back</a>
           <div class="links-group first">
             <h3>Engagement</h3><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a><a href="/features/assesments/live-assesment.html">Initation system</a><a href="/features/assesments/live-assesment.html">Branding</a>
           </div>
@@ -39,8 +39,7 @@
     <div class="container flex-row-reverse">
       <div class="side-wrapper">
         <div class="side-content">
-          <h1 class="white">Land the perfect job</h1>
-          <p class="sub white">Glider is an artificial intelligence powered tool to get jobs that you will love</p>
+          <h2 class="white">Glider is an artificial intelligence powered tool to get jobs that you will love</h2>
         </div>
       </div>
       <div class="image">
