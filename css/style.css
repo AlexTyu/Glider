@@ -1317,17 +1317,14 @@ body.feature .feature-section {
   display: flex;
   justify-content: center;
 }
-body.pricing .card-container {
-  width: 980px;
-  padding: 0 1em;
-  display: flex;
-}
 body.pricing #pricing-cover {
   height: 400px;
   background-image: url("/files/sky-bg.png");
   background-size: cover;
 }
 body.pricing .card-container {
+  width: 980px;
+  display: flex;
   flex-direction: row;
 }
 body.pricing .card-container .pricing-section {
@@ -1338,7 +1335,7 @@ body.pricing .card-container .pricing-section.tall {
   margin-left: 20px;
   margin-right: 20px;
 }
-body.pricing .pricing-card {
+body.pricing .card-container .pricing-section .pricing-card {
   background: white;
   border-radius: 8px;
   width: 100%;
@@ -1347,25 +1344,25 @@ body.pricing .pricing-card {
   box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.06);
   border: solid 1px #e4e4e4;
 }
-body.pricing .pricing-card.pro {
+body.pricing .card-container .pricing-section .pricing-card.pro {
   margin-top: -100px;
   height: 455px;
 }
-body.pricing .feature-list {
+body.pricing .card-container .pricing-section .pricing-features {
   margin-top: 60px;
-  margin-bottom: 160px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
 }
-body.pricing ul {
+body.pricing .card-container .pricing-section .pricing-features ul {
   list-style: none;
   padding: 0 0;
 }
-body.pricing ul li {
+body.pricing .card-container .pricing-section .pricing-features ul li {
   padding: 10px 0px;
   color: #2d2d2d;
 }
-body.pricing ul li::before {
+body.pricing .card-container .pricing-section .pricing-features ul li::before {
   content: "";
   display: block;
   width: 30px;
@@ -1377,14 +1374,67 @@ body.pricing ul li::before {
   background-repeat: no-repeat;
   background-image: url("/files/icons/check.svg");
 }
-body.pricing ul li.line {
+body.pricing .card-container .pricing-section .pricing-features ul li.line {
   text-decoration: line-through;
   color: grey;
 }
-body.pricing ul li.line::before {
+body.pricing .card-container .pricing-section .pricing-features ul li.line::before {
   content: "";
   display: block;
   background-image: none;
+}
+body.pricing .faq-container {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border: solid 1px #e4e4e4;
+}
+body.pricing .faq-container .faq-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url(//res.cloudinary.com/glider/image/upload/glider/cover2.jpg);
+  background-size: cover;
+  height: 450px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+body.pricing .faq-container .faq-top .side-content .apps {
+  display: flex;
+}
+body.pricing .faq-container .faq-top .side-content .apps a.ios {
+  display: block;
+  background: url(//res.cloudinary.com/glider/image/upload/glider/applestore.png);
+  width: 165px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+}
+body.pricing .faq-container .faq-top .side-content .apps a.android {
+  display: block;
+  background: url(//res.cloudinary.com/glider/image/upload/glider/googleplay.png);
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 52px;
+}
+body.pricing .faq-container .faq-top .image img {
+  right: 86px;
+  margin-bottom: -30px;
+}
+body.pricing .faq-container .faq-bottom {
+  width: 100%;
+  justify-content: center;
+}
+body.pricing .faq-container .faq-bottom .title {
+  flex: none;
+  margin-top: 60px;
+  padding: 0 1em;
+}
+body.pricing .faq-container .faq-bottom .wrap-container {
+  display: flex;
+  flex-direction: row;
 }
 /* Employer page only */
 body.employer #cover {
@@ -1409,15 +1459,11 @@ body.employer #assesment {
   }
   .container,
   .container.image-at-left {
-<<<<<<< HEAD
     flex-direction: column !important;
   }
   .container {
     width: auto !important;
     flex-grow: 1 !important;
-=======
-    flex-direction: column;
->>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
   }
   .container .image .hero-image {
     height: 100%;
@@ -1432,8 +1478,10 @@ body.employer #assesment {
     justify-content: center;
     text-align: center;
   }
-<<<<<<< HEAD
-  .pricing-section.tall {
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .pricing-section.tall {
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -1449,15 +1497,6 @@ body.employer #assesment {
   #feature-cover a::after {
     display: none;
   }
-=======
-  .card-container {
-    flex-direction: column;
-  }
-  .card-container .pricing-section.tall {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
->>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
 }
 body {
   padding: 0;
