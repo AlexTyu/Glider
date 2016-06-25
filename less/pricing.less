@@ -11,17 +11,21 @@ body.pricing{
     background-image: url("/files/sky-bg.png");
     background-size: cover;
   }
+  .card-container{
+    flex-direction: row;
+    
+    .pricing-section {
+      width: 100%;
+      height: auto;
+      //margin-top: -50px;
 
-  .pricing-section {
-    width: 100%;
-    height: auto;
-    //margin-top: -50px;
-
-    &.tall {
-      margin-left: 20px;
-      margin-right: 20px;
+      &.tall {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
   }
+
 
   //---- Pricing Card ----//
 

@@ -1327,11 +1327,14 @@ body.pricing #pricing-cover {
   background-image: url("/files/sky-bg.png");
   background-size: cover;
 }
-body.pricing .pricing-section {
+body.pricing .card-container {
+  flex-direction: row;
+}
+body.pricing .card-container .pricing-section {
   width: 100%;
   height: auto;
 }
-body.pricing .pricing-section.tall {
+body.pricing .card-container .pricing-section.tall {
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -1406,11 +1409,15 @@ body.employer #assesment {
   }
   .container,
   .container.image-at-left {
+<<<<<<< HEAD
     flex-direction: column !important;
   }
   .container {
     width: auto !important;
     flex-grow: 1 !important;
+=======
+    flex-direction: column;
+>>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
   }
   .container .image .hero-image {
     height: 100%;
@@ -1425,6 +1432,7 @@ body.employer #assesment {
     justify-content: center;
     text-align: center;
   }
+<<<<<<< HEAD
   .pricing-section.tall {
     margin-left: 0px;
     margin-right: 0px;
@@ -1441,6 +1449,15 @@ body.employer #assesment {
   #feature-cover a::after {
     display: none;
   }
+=======
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .pricing-section.tall {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+>>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
 }
 body {
   padding: 0;
