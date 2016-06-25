@@ -8,16 +8,16 @@
   
   .header-links.employer
     a.link01.mega-link(ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()") Features
-    a.link04(href="/Pricing") Pricing
-    a.link02(href="/") For Candidate
+    a.link02(href="/Pricing") Pricing
+    a.link03(href="/") For Candidate
     .header-buttons
-      a.button.signup Sign up
-      a.button.login Login
-  .menu-button(ng-click="activeMenu()")
+      a.button.signup.link04 Sign up
+      a.button.login.link04 Login
+  .menu-button(ng-click="activeMenu(); MegamenuActive = false")
 
   .megamenu(ng-mouseleave="activeMegaMenu()")
     .container
-      a.back(ng-click="activeMegaMenu()") Back to menu
+      a.back(ng-click="activeMegaMenu()") Back
       .links-group.first
         h3 Engagement
         a(href="/features/assesments/live-assesment.html") Web-platforms sourcing

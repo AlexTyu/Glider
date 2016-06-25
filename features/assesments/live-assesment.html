@@ -16,12 +16,12 @@
   <div class="main-header employer menu-minimized">
     <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
       <div class="header-links candidate"><a href="/employer">Hiring?</a></div>
-      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/Pricing" class="link04">Pricing</a><a href="/" class="link02">For Candidate</a>
-        <div class="header-buttons"><a class="button signup">Sign up</a><a class="button login">Login</a></div>
+      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/Pricing" class="link02">Pricing</a><a href="/" class="link03">For Candidate</a>
+        <div class="header-buttons"><a class="button signup link04">Sign up</a><a class="button login link04">Login</a></div>
       </div>
-      <div ng-click="activeMenu()" class="menu-button"></div>
+      <div ng-click="activeMenu(); MegamenuActive = false" class="menu-button"></div>
       <div ng-mouseleave="activeMegaMenu()" class="megamenu">
-        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back to menu</a>
+        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back</a>
           <div class="links-group first">
             <h3>Engagement</h3><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a><a href="/features/assesments/live-assesment.html">Initation system</a><a href="/features/assesments/live-assesment.html">Branding</a>
           </div>
@@ -36,7 +36,7 @@
     </div>
   </div>
   <section id="feature-cover">
-    <div scroll="scroll" id="page" ng-class="{'feature-header-fixed':boolChangeClass}" class="feature-header flex-align-center">
+    <div scroll="scroll" id="page" ng-class="{'feature-header-fixed':boolChangeClass}" class="feature-header flex-justify-center">
       <div class="container"><a class="prev white">Ai Pre-evaluation algoryhm</a>
         <h1 class="white center">Live Assesment</h1><a class="next white">Online interview</a>
       </div>

@@ -6,7 +6,6 @@
   and (min-width: 0px)
   and (max-width: 780px){
 
-
   #cover{
     .side-wrapper{
       padding-top: 90px;
@@ -17,11 +16,12 @@
   }
 
   .container, .container.image-at-left{
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .container{
-
+    width: auto !important;
+    flex-grow: 1 !important;
     .image{
 
       .hero-image{
@@ -41,17 +41,27 @@
     }
   }
 
-  body.pricing{
+  .card-container{
+    flex-direction: column;
 
-    .card-container{
-      flex-direction: column;
-
-      .pricing-section.tall{
-        margin-left: 0px;
-        margin-right: 0px;
-      }
+    .pricing-section.tall{
+      margin-left: 0px;
+      margin-right: 0px;
     }
-
   }
 
+  #feature-cover{
+    .container{
+      flex-direction: row !important;
+    }
+
+    a.prev, a.next{
+      width: 40px;
+      padding: 0;
+      color: transparent;
+    }
+    a::after{
+      display: none;
+    }
+  }
 }

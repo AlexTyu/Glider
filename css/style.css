@@ -141,6 +141,8 @@
   background-position: center;
   cursor: pointer;
   background-image: url("/files/icons/menu.svg");
+  transition: 0.3s ease;
+  transform: none;
 }
 @-webkit-keyframes slide-down {
   0% {
@@ -157,7 +159,7 @@
   height: 0px;
   width: 100%;
   z-index: -1;
-  transition: 0.3s cubic-bezier(0.65, 0.01, 0.32, 1);
+  transition: 0.2s cubic-bezier(0.65, 0.01, 0.32, 1);
   overflow: hidden;
   justify-content: center;
   pointer-events: none;
@@ -192,8 +194,13 @@
   text-transform: uppercase;
 }
 .header-wrapper.menu-active {
-  height: 400px;
+  height: 340px !important;
   background: rgba(0, 0, 0, 0.85);
+}
+.header-wrapper.menu-active .menu-button {
+  background-image: url("/files/cross.svg;");
+  transform: rotate(180deg);
+  background-size: 19px;
 }
 .header-wrapper.menu-active .header-links {
   opacity: 1;
@@ -252,6 +259,7 @@
   }
   .header-wrapper .logo {
     top: 3px;
+    left: 0px;
   }
   .header-wrapper .logo .symbol {
     opacity: 0;
@@ -264,23 +272,25 @@
   }
   .header-wrapper .header-links {
     opacity: 0;
+    margin-top: 80px;
+    position: initial;
     flex-direction: column;
-    width: 100%;
     align-items: flex-start;
-    padding-bottom: 50px;
     pointer-events: none;
     transform: translate3d(0px, -50px, 0px);
-    left: 0px;
-    top: 80px;
     z-index: 10;
+    margin-left: 20px;
+    margin-right: 20px;
     overflow-y: scroll;
+    flex-grow: 1;
   }
   .header-wrapper .header-links a {
     font-size: 1em;
     line-height: 3em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+    display: flex;
     width: 100%;
-    margin-left: 36px;
     padding-left: 0;
   }
   .header-wrapper .links {
@@ -288,7 +298,6 @@
   }
   .header-wrapper .header-buttons {
     width: 100%;
-    margin-left: -10px;
     padding-top: 40px;
   }
   .header-wrapper .megamenu {
@@ -303,11 +312,20 @@
     transform: translate3d(200px, 0, 0);
     margin-top: 0px;
   }
+  .header-wrapper.menu-active {
+    flex-direction: row;
+  }
   .header-wrapper.menu-active .header-links {
     transform: translate3d(0px, 0px, 0px);
   }
+  .header-wrapper.menu-active .header-links .mega-link::before {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    transform: rotate(0deg);
+  }
   .header-wrapper.megamenu-active {
-    height: 1200px;
+    height: 100% !important;
     background: rgba(0, 0, 0, 0.85);
   }
   .header-wrapper.megamenu-active .header-links {
@@ -318,16 +336,26 @@
     opacity: 1;
     z-index: 2;
     height: 100%;
+    margin-top: 80px;
+    top: 0;
+    position: absolute;
     background: none;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
     transform: translate3d(0, 0, 0);
     pointer-events: all;
   }
-  .header-wrapper.megamenu-active .megamenu .container a.back {
+  .header-wrapper.megamenu-active .megamenu h3 {
+    color: white;
+  }
+  .header-wrapper.megamenu-active .megamenu a.back {
     position: absolute;
     display: block;
-    width: 100%;
     height: 60px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 500;
   }
   .header-wrapper.megamenu-active .logo .symbol {
     opacity: 0;
@@ -1196,6 +1224,8 @@ body.feature .feature-header {
 }
 body.feature .feature-header .container {
   justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 body.feature .feature-header h1 {
   transition: 0.3s ease-out;
@@ -1287,14 +1317,17 @@ body.feature .feature-section {
   display: flex;
   justify-content: center;
 }
+body.pricing .card-container {
+  width: 980px;
+  padding: 0 1em;
+  display: flex;
+}
 body.pricing #pricing-cover {
   height: 400px;
   background-image: url("/files/sky-bg.png");
   background-size: cover;
 }
 body.pricing .card-container {
-  width: 980px;
-  display: flex;
   flex-direction: row;
 }
 body.pricing .card-container .pricing-section {
@@ -1305,7 +1338,7 @@ body.pricing .card-container .pricing-section.tall {
   margin-left: 20px;
   margin-right: 20px;
 }
-body.pricing .card-container .pricing-section .pricing-card {
+body.pricing .pricing-card {
   background: white;
   border-radius: 8px;
   width: 100%;
@@ -1314,25 +1347,25 @@ body.pricing .card-container .pricing-section .pricing-card {
   box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.06);
   border: solid 1px #e4e4e4;
 }
-body.pricing .card-container .pricing-section .pricing-card.pro {
+body.pricing .pricing-card.pro {
   margin-top: -100px;
   height: 455px;
 }
-body.pricing .card-container .pricing-section .pricing-features {
+body.pricing .feature-list {
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 160px;
   display: flex;
   justify-content: center;
 }
-body.pricing .card-container .pricing-section .pricing-features ul {
+body.pricing ul {
   list-style: none;
   padding: 0 0;
 }
-body.pricing .card-container .pricing-section .pricing-features ul li {
+body.pricing ul li {
   padding: 10px 0px;
   color: #2d2d2d;
 }
-body.pricing .card-container .pricing-section .pricing-features ul li::before {
+body.pricing ul li::before {
   content: "";
   display: block;
   width: 30px;
@@ -1344,67 +1377,14 @@ body.pricing .card-container .pricing-section .pricing-features ul li::before {
   background-repeat: no-repeat;
   background-image: url("/files/icons/check.svg");
 }
-body.pricing .card-container .pricing-section .pricing-features ul li.line {
+body.pricing ul li.line {
   text-decoration: line-through;
   color: grey;
 }
-body.pricing .card-container .pricing-section .pricing-features ul li.line::before {
+body.pricing ul li.line::before {
   content: "";
   display: block;
   background-image: none;
-}
-body.pricing .faq-container {
-  background: white;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  border: solid 1px #e4e4e4;
-}
-body.pricing .faq-container .faq-top {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: url(//res.cloudinary.com/glider/image/upload/glider/cover2.jpg);
-  background-size: cover;
-  height: 450px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-body.pricing .faq-container .faq-top .side-content .apps {
-  display: flex;
-}
-body.pricing .faq-container .faq-top .side-content .apps a.ios {
-  display: block;
-  background: url(//res.cloudinary.com/glider/image/upload/glider/applestore.png);
-  width: 165px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-}
-body.pricing .faq-container .faq-top .side-content .apps a.android {
-  display: block;
-  background: url(//res.cloudinary.com/glider/image/upload/glider/googleplay.png);
-  width: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 52px;
-}
-body.pricing .faq-container .faq-top .image img {
-  right: 86px;
-  margin-bottom: -30px;
-}
-body.pricing .faq-container .faq-bottom {
-  width: 100%;
-  justify-content: center;
-}
-body.pricing .faq-container .faq-bottom .title {
-  flex: none;
-  margin-top: 60px;
-  padding: 0 1em;
-}
-body.pricing .faq-container .faq-bottom .wrap-container {
-  display: flex;
-  flex-direction: row;
 }
 /* Employer page only */
 body.employer #cover {
@@ -1429,7 +1409,15 @@ body.employer #assesment {
   }
   .container,
   .container.image-at-left {
+<<<<<<< HEAD
+    flex-direction: column !important;
+  }
+  .container {
+    width: auto !important;
+    flex-grow: 1 !important;
+=======
     flex-direction: column;
+>>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
   }
   .container .image .hero-image {
     height: 100%;
@@ -1444,13 +1432,32 @@ body.employer #assesment {
     justify-content: center;
     text-align: center;
   }
-  body.pricing .card-container {
-    flex-direction: column;
-  }
-  body.pricing .card-container .pricing-section.tall {
+<<<<<<< HEAD
+  .pricing-section.tall {
     margin-left: 0px;
     margin-right: 0px;
   }
+  #feature-cover .container {
+    flex-direction: row !important;
+  }
+  #feature-cover a.prev,
+  #feature-cover a.next {
+    width: 40px;
+    padding: 0;
+    color: transparent;
+  }
+  #feature-cover a::after {
+    display: none;
+  }
+=======
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .pricing-section.tall {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+>>>>>>> 8674906001c6827bdfc37d68203226cb0502e9b5
 }
 body {
   padding: 0;
@@ -1459,10 +1466,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #1a2437;
-}
-div {
-  border: 1px solid aqua;
-  box-sizing: content-box;
 }
 section {
   width: 100%;
@@ -1542,7 +1545,7 @@ p {
   font-size: 20px;
   letter-spacing: 0.37px;
   line-height: 29px;
-  margin-bottom: 2em;
+  margin-bottom: 0em;
   font-weight: 300;
 }
 .white {
