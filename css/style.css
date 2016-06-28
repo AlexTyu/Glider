@@ -165,7 +165,6 @@
   pointer-events: none;
   background: white;
   margin-top: 100px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 }
 .header-wrapper .megamenu .links-group {
   animation-duration: 0.5s;
@@ -194,7 +193,7 @@
   text-transform: uppercase;
 }
 .header-wrapper.menu-active {
-  height: 340px !important;
+  height: 360px !important;
   background: rgba(0, 0, 0, 0.85);
 }
 .header-wrapper.menu-active .menu-button {
@@ -249,6 +248,10 @@
 .header-wrapper.megamenu-active .megamenu .links-group.third {
   animation-name: slide-down;
   animation-delay: 0.3s;
+}
+.header-wrapper.megamenu-active .megamenu .links-group.forth {
+  animation-name: slide-down;
+  animation-delay: 0.4s;
 }
 /* ----------- Tablet ----------- */
 /* Portrait and Landscape */
@@ -371,7 +374,6 @@
   background: #201f1f;
   width: 100%;
   height: auto;
-  margin-top: -50px;
 }
 .footer-wrapper .footer-top {
   display: flex;
@@ -1618,6 +1620,7 @@ body.pricing .faq-container {
   width: 100%;
   height: auto;
   border: solid 1px #e4e4e4;
+  margin-bottom: -50px;
 }
 body.pricing .faq-container .faq-top {
   width: 100%;
@@ -1687,15 +1690,64 @@ body.pricing .faq-container .faq-bottom .wrap-container .text p {
 }
 /* Employer page only */
 body.employer #cover {
-  height: 700px;
+  height: 75vh;
   background: #1a2437;
 }
-body.employer #engage {
-  height: 720px;
+body.employer #intro {
+  height: 600px;
 }
-body.employer #assesment {
-  height: 840px;
-  background: white;
+body.employer #intro .container {
+  align-items: center;
+}
+body.employer #intro .container h1 {
+  margin-top: 120px;
+}
+body.employer #intro .container .values-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+}
+body.employer #intro .container .values-container .value {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+body.employer #intro .container .values-container .value h2 {
+  margin-bottom: 0px;
+}
+body.employer #intro .container .values-container .value p {
+  font-size: 18px;
+  line-height: 26px;
+}
+body.employer #intro .container .values-container .value.first {
+  padding-right: 50px;
+  border-right: 1px solid rgba(128, 128, 128, 0.13);
+}
+body.employer #intro .container .values-container .value.second {
+  padding: 0 50px;
+}
+body.employer #intro .container .values-container .value.third {
+  padding-left: 50px;
+  border-left: 1px solid rgba(128, 128, 128, 0.13);
+}
+body.employer #source {
+  height: 900px;
+}
+body.employer #source img {
+  padding-left: 70px;
+}
+body.employer #shortlist {
+  height: 900px;
+}
+body.employer #shortlist img {
+  padding-right: 70px;
+}
+body.employer #assess {
+  height: 900px;
+}
+body.employer #assess img {
+  top: 10%;
 }
 /* === Media Queries === */
 /* Portrait and Landscape */
@@ -1875,7 +1927,8 @@ p {
   font-size: 20px;
   letter-spacing: 0.37px;
   line-height: 29px;
-  margin-bottom: 0em;
+  margin-bottom: 2em;
+  margin-top: 1em;
   font-weight: 300;
 }
 .white {
@@ -1952,4 +2005,10 @@ p {
   position: absolute;
   bottom: 0;
   z-index: 0;
+}
+.image.image-center img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
 }

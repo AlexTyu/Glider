@@ -18,39 +18,75 @@ body.employer(ng-app='Glider' ng-controller='LSD')
           img.hero-image(src="/files/developer.png")
           
     section#intro.white-bg
-      .container.flex-justify-center
-        h2.center Glider – is a world-first ai based hiring system
+      .container.flex-column
+        h1.center Glider is a world-first A.I. based hiring system
+        .values-container
+          .value.first
+            //- .value-img
+            //-   img(src="/files/temp-placeholder.png")
+            h2 A.I. based
+            p.sub Worlds-first artifitial inteligence driven hiring platform, that creates perfect match between job and candidate
+          .value.second
+            //- .value-img
+            //-   img(src="/files/temp-placeholder.png")
+            h2 Easy to use
+            p.sub Worlds-first artifitial inteligence driven hiring platform, that creates perfect match between job and candidate
+          .value.third
+            //- .value-img
+            //-   img(src="/files/temp-placeholder.png")
+            h2 No resumes
+            p.sub Worlds-first artifitial inteligence driven hiring platform, that creates perfect match between job and candidate
         
-    section#Engage.gray-bg
+    section#source.gray-bg
+      .container.reverse
+        .side-wrapper
+          .side-content
+            h1 Comprehensive sourcing 
+            p.sub Glider adapts your sourcing to websites your candidates visit. Accept online applications from your website, upload resumes you receive from job boards and get access to exclusive pool of Glider candidates.
+            
+            .links-group
+              a.icon-source Inbound recruiting
+              a.icon-source Outbound recruiting
+              a.icon-source Mobile friendly outreach
+        
+        .image.image-center
+          img(src="/files/placeholder2.png" style="width: 650px;")
+      
+    section#shortlist.white-bg
       .container.image-at-left
         .side-wrapper
           .side-content
-            h1 Engage best of a kind
-            p.sub Engage great talent thru hiring automation, find a perfect match
+            h1 Get the best of a kind
+            p.sub Glider’s artificial intelligence engine assigns a match score to each resume by comparing the candidate’s skills, competencies and work experience  with your needs. You can now easily shortlist some of the candidates and personalize the subsequent hiring process for the chosen ones.
             
             .links-group
-              a.icon-source Web-platforms Sourcing
-              a.icon-source Invitation system
-              a.icon-source Brand Showcase
-              a.icon-source Matching algorythm
+              a.icon-source Resume parsing
+              a.icon-source A.I. based scoring
+              a.icon-source Intelligent workflows
         
-        .image
-          img(src="/files/assesment.png" style="width: 960px;")
+        .image.image-center
+          img(src="/files/placeholder1.png" style="width: 690px;")
+          
+    section#assess.gray-bg
+      .container.reverse
+        .side-wrapper
+          .side-content
+            h1 Powerful evaluation tools
+            p.sub Screen candidates with the world’s most powerful assessment toolkit. Author a simple quiz or an unimaginably complex assessment or just use one of the free question banks.
+            
+            .links-group
+              a.icon-source Question library
+              a.icon-source Quiz authoring
+              a.icon-source Multi-domain testing
+              a.icon-source Auto grading
+              a.icon-source Reporting
+              a.icon-source Adaptive assessments
+              a.icon-source Proctoring
+              a.icon-source Plagiarism detection
+              a.icon-source ATS integration
+        
+        .image.image-center
+          img(src="/files/assesment.png" style="width: 1050px;")      
       
-    section#assesment
-      //- .container.reverse
-      //-   .side-wrapper
-      //-     .side-content
-      //-       h1 Assesments
-      //-       p.sub See candidate’s way of thinking by assigning assesments from our library
-      //-       
-      //-       .links
-      //-         a.icon-source Assesment library
-      //-         a.icon-source Video assesments
-      //-         a.icon-source 14 Types of questions
-      //-   
-      //-   .image(style="right: -100px; bottom: 80px;")
-      //-     img(src="/files/assesment.png" style="width: 960px;")
-      //- 
 
 include ../includes/footer.jade      

@@ -176,7 +176,7 @@
     pointer-events: none;
     background: white;
     margin-top: 100px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.09); this feature is buggy
 
     .links-group{
       animation-duration: 0.5s;
@@ -215,7 +215,7 @@
 
 
   &.menu-active{
-    height: 340px !important;
+    height: 360px !important;
     background: rgba(0, 0, 0, 0.85);
 
     .menu-button{
@@ -280,6 +280,11 @@
       .links-group.third{
         animation-name: slide-down;
         animation-delay: 0.3s;
+      }
+
+      .links-group.forth{
+        animation-name: slide-down;
+        animation-delay: 0.4s;
       }
 
     }
