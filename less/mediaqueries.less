@@ -46,33 +46,87 @@
 body.pricing .card-container{
     flex-direction: column;
 
+    .pricing-section{
+
+      .pricing-card{
+        margin-top: 0px;
+
+        &.frst{
+          margin-top: -50px;
+        }
+
+        &.pro{
+          margin-top: 0px;
+        }
+      }
+
+      .pricing-features{
+        margin-top: 20px;
+
+        ul{
+          li.line{
+            display: none;
+          }
+        }
+      }
+    }
+
     .pricing-section.tall{
       margin-left: 0px;
       margin-right: 0px;
+
+      p{
+        margin-bottom: 0px;
+      }
     }
   }
 
 
 .faq-container{
 
-  .title{
-    padding: 2em !important;
-  }
+  .faq-top{
 
-  .wrap-container{
-    flex-direction: column !important;
-    padding: 0 2em !important;
-  }
+    .side-wrapper{
+      padding-top: 90px;
+      padding-bottom: 90px;
 
-  .text{
-    &.left{
-      padding-right: 0px !important;
+      .side-content{
+
+        .apps{
+          justify-content: center;
+        }
+      }
     }
 
-    &.right{
-      padding-left: 0px !important;
+    .image{
+      display: none;
+    }
+
+  }
+
+  .faq-bottom{
+
+    .title{
+      padding: 2em !important;
+      margin-top: 40px !important;
+    }
+
+    .wrap-container{
+      flex-direction: column !important;
+      padding: 0 2em !important;
+
+      .text{
+        &.left{
+          padding-right: 0px !important;
+        }
+
+        &.right{
+          padding-left: 0px !important;
+        }
+      }
     }
   }
+
 }
 
 

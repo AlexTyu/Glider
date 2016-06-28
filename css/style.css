@@ -1635,7 +1635,7 @@ body.pricing .faq-container .faq-top .side-content .apps {
 body.pricing .faq-container .faq-top .side-content .apps a.ios {
   display: block;
   background: url(//res.cloudinary.com/glider/image/upload/glider/applestore.png);
-  width: 165px;
+  width: 150px;
   background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
@@ -1730,21 +1730,50 @@ body.employer #assesment {
   body.pricing .card-container {
     flex-direction: column;
   }
+  body.pricing .card-container .pricing-section .pricing-card {
+    margin-top: 0px;
+  }
+  body.pricing .card-container .pricing-section .pricing-card.frst {
+    margin-top: -50px;
+  }
+  body.pricing .card-container .pricing-section .pricing-card.pro {
+    margin-top: 0px;
+  }
+  body.pricing .card-container .pricing-section .pricing-features {
+    margin-top: 20px;
+  }
+  body.pricing .card-container .pricing-section .pricing-features ul li.line {
+    display: none;
+  }
   body.pricing .card-container .pricing-section.tall {
     margin-left: 0px;
     margin-right: 0px;
   }
-  .faq-container .title {
-    padding: 2em !important;
+  body.pricing .card-container .pricing-section.tall p {
+    margin-bottom: 0px;
   }
-  .faq-container .wrap-container {
+  .faq-container .faq-top .side-wrapper {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .faq-container .faq-top .side-wrapper .side-content .apps {
+    justify-content: center;
+  }
+  .faq-container .faq-top .image {
+    display: none;
+  }
+  .faq-container .faq-bottom .title {
+    padding: 2em !important;
+    margin-top: 40px !important;
+  }
+  .faq-container .faq-bottom .wrap-container {
     flex-direction: column !important;
     padding: 0 2em !important;
   }
-  .faq-container .text.left {
+  .faq-container .faq-bottom .wrap-container .text.left {
     padding-right: 0px !important;
   }
-  .faq-container .text.right {
+  .faq-container .faq-bottom .wrap-container .text.right {
     padding-left: 0px !important;
   }
   #feature-cover .container {
