@@ -15,9 +15,9 @@ body.pricing(ng-app='Glider', ng-controller='LSD')
       .card-container
         .pricing-section
           .pricing-card
-            h3 Standard
+            h2 Standard
             hr
-            h2 Free
+            h2.price Free
             hr
             p Vast assessment, chat and job posting options to start hiring today.
             .button.empty Sign Up
@@ -44,19 +44,20 @@ body.pricing(ng-app='Glider', ng-controller='LSD')
         
         .pricing-section.tall
           .pricing-card.pro
-            h3 Profefsional
+            h2 Profefsional
             hr
-            h2
-              | 299
-              span  &frasl;mo
+            h1.price
+              | &#36;299
+              span &frasl; mo
             hr
             p Advanced assessment and interview options, ai-powered resume scoring and more.
             .button Start Free Trial
-            p
+            p.cta
               | or 
               a(href='www.paypal.com') upgrade now
               
-          p 60 day trial. No credit card needed.
+          p 
+            i 60 day trial. No credit card needed.
                 
           .pricing-features
             ul
@@ -80,9 +81,9 @@ body.pricing(ng-app='Glider', ng-controller='LSD')
         
         .pricing-section
           .pricing-card
-            h3 Enterprise
+            h2 Enterprise
             hr
-            h2 Custom
+            h2.price Custom
             hr
             p Proctored assessments, unlimited interviews and dedicated support.
             .button.empty Contact Us
@@ -107,6 +108,7 @@ body.pricing(ng-app='Glider', ng-controller='LSD')
               li Dedicated account manager
 
        .faq-container
+       
          .faq-top
            .container.image-at-left
              .side-wrapper
@@ -118,16 +120,26 @@ body.pricing(ng-app='Glider', ng-controller='LSD')
                    a.ios
              .image
                img(src="../../files/phones.png" )
+          
           .faq-bottom
             .title
               h2 Frequently asked questions
+            
             .wrap-container
-              .text.flex-1
-                h3 
-                p hrherer
-                p fdfd df 
-              .text.flex-1
-                p hrherer
-                p fdfd df 
+              .text.left.flex-1
+                h3 Is there any fee for candidates hired through Glider app?
+                p Glider charges a placement fee that is 4% of the candidate’s first year salary for hired candidates who independently apply for your job from the Glider app.
+                br
+                h3 What happens after the 60 day trial?
+                p You could make a payment and stay on the Professional plan. If we do not get your payment, we will automatically switch you to the Standard plan.
+                br
+              .text.right.flex-1
+                h3 Is there any fee for candidates hired through Glider app?
+                p Glider charges a placement fee that is 4% of the candidate’s first year salary for hired candidates who independently apply for your job from the Glider app.
+                br
+                h3 What happens after the 60 day trial?
+                p You could make a payment and stay on the Professional plan. If we do not get your payment, we will automatically switch you to the Standard plan.
+                br 
         
+include ../includes/footer.jade
                 
