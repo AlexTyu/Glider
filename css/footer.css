@@ -1,0 +1,6 @@
+footer {
+  background: #201f1f;
+  background-image: radial-gradient(49% 120%, rgba(255, 255, 255, 0.01) 20%, rgba(0, 0, 0, 0.01) 100%);
+  width: 1200px;
+  height: 474px;
+}
