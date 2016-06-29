@@ -8,24 +8,39 @@ body.feature(ng-app='Glider', ng-controller='LSD')
   section#feature-cover
       .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
         .container
-          a.prev.white Ai Pre-evaluation algoryhm
-          h1.white.center Live Assesment
-          a.next.white Online interview
+          a.prev.white(href="/features/parsing/parsing.html") Resume parsing
+          h1.white.center A.I. based scoring
+          a.next.white(href="/features/workflow/workflow.html") Intelligent workflows
         
       
   .content-wrapper
     .container
       .content
         .feature-section()
-          h2.center(style="padding: 70px 30px;") We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific.
+          h2.center(style="padding: 70px 30px;") Get  help from artificial intelligence in short listing candidates
     
-        .feature-section(style="background: #14263A; height: 400px;")
-          .container.image-at-left
+        .feature-section(style="background: rgba(0,0,0,0.04); height: 450px;")
+          .container.image-at-left.features-container
             .side-wrapper
               .side-content
-                h2.white Live codindg interview
-                p.sub.white We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific position.  
-            .image
-              img(src="../../files/features/coding.png" )
-          
-    
+                h2 Get a match score
+                p.sub Glider’s artificial intelligence engine assigns a match score for each candidate for a particular job based on the candidate’s academic credentials, work experience, skills and more.  This makes it easy for you to shortlist candidate from a pool of resumes.   
+            .image.image-center
+              img(src="../../files/features/image.png" style="left: -2em; height: 350px;")
+              
+        .feature-section(style="height: 600px;")
+          .container.reverse.features-container
+            .side-wrapper
+              .side-content
+                h2 Auto-discover archived candidates
+                p.sub Glider’s artificial intelligence engine automatically auto-discovers candidates in your archive repository who may have applied to your company earlier and assigns a match score for the specific job.  Finding an interested and suitable candidate may be easier than you imagined.  
+            .image.image-center
+              img(src="../../files/features/image.png" style="right: 0; height: 350px;")
+      
+  section#feature-bottom
+    .container
+      a.prev.white(href="/features/parsing/parsing.html") Resume parsing
+      .divider
+      a.next.white(href="/features/workflow/workflow.html") Intelligent workflows    
+      
+include ../../includes/footer.jade

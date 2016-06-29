@@ -1,0 +1,46 @@
+include ../../includes/head.jade
+
+body.feature(ng-app='Glider', ng-controller='LSD')
+
+  .main-header.employer.menu-minimized
+    include ../../includes/header.jade
+
+  section#feature-cover
+      .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
+        .container
+          a.prev.white(href="/features/m-d-testing/m-d-testing.html") Multi-domain testing
+          h1.white.center Auto grading
+          a.next.white(href="/features/adaptive-ass/adaptive-ass.html") Adaptive assessments
+        
+      
+  .content-wrapper
+    .container
+      .content
+        .feature-section()
+          h2.center(style="padding: 70px 30px;") Personalize your hiring strategy to suit the candidate
+    
+        .feature-section(style="background: rgba(0,0,0,0.04); height: 450px;")
+          .container.image-at-left.features-container
+            .side-wrapper
+              .side-content
+                h2 Auto assessments
+                p.sub Send out assessments to all your shortlisted candidates with a single click. Glider can automate assessments for all your jobs. Just set it up at the time of job posting and assessments are sent out automatically every time a candidate is shortlisted.Candidates can attempt assessments online and even record video responses for questions.     
+            .image.image-center
+              img(src="../../files/features/image.png" style="left: -2em; height: 350px;")
+              
+        .feature-section(style="height: 600px;")
+          .container.reverse.features-container
+            .side-wrapper
+              .side-content
+                h2 Side-by-side comparison
+                p.sub Want to see how your candidates performed? Compare candidate scores or even the source code side-by-side for programming hires. With a sortable scoreboard you can easily identify the top performers.  
+            .image.image-center
+              img(src="../../files/features/image.png" style="right: 0; height: 350px;")
+      
+  section#feature-bottom
+    .container
+      a.prev.white(href="/features/m-d-testing/m-d-testing.html") Multi-domain testing
+      .divider
+      a.next.white(href="/features/adaptive-ass/adaptive-ass.html") Adaptive assessments    
+      
+include ../../includes/footer.jade

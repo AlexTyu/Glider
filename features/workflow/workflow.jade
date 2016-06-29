@@ -8,24 +8,39 @@ body.feature(ng-app='Glider', ng-controller='LSD')
   section#feature-cover
       .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
         .container
-          a.prev.white Ai Pre-evaluation algoryhm
-          h1.white.center Live Assesment
-          a.next.white Online interview
+          a.prev.white(href="/features/ai-score/ai-score.html") A.I. based scoring
+          h1.white.center Intelligent workflows
+          a.next.white(href="/features/q-lib/q-lib.html") Question library
         
       
   .content-wrapper
     .container
       .content
         .feature-section()
-          h2.center(style="padding: 70px 30px;") We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific.
+          h2.center(style="padding: 70px 30px;") Personalize your hiring strategy to suit the candidate
     
-        .feature-section(style="background: #14263A; height: 400px;")
-          .container.image-at-left
+        .feature-section(style="background: rgba(0,0,0,0.04); height: 450px;")
+          .container.image-at-left.features-container
             .side-wrapper
               .side-content
-                h2.white Live codindg interview
-                p.sub.white We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific position.  
-            .image
-              img(src="../../files/features/coding.png" )
-          
-    
+                h2 Intelligent workflows
+                p.sub Based on the match score you could choose the appropriate next step that makes the best use of  your and the candidate’s time. Candidates  who are not shortlisted can be notified that they are not an appropriate match, candidates with a good score can be asked to take an assessment, while the candidates  with very high scores who are likely to be highly sought after can be interviewed in person or over the phone.    
+            .image.image-center
+              img(src="../../files/features/image.png" style="left: -2em; height: 350px;")
+              
+        //- .feature-section(style="height: 600px;")
+        //-   .container.reverse.features-container
+        //-     .side-wrapper
+        //-       .side-content
+        //-         h2 Mobile friendly job descriptions
+        //-         p.sub Want to create job descriptions that look great on a desktop and awesome on the mobile? Do so with  Glider and watch a continuous live preview on a mobile simulator.  
+        //-     .image.image-center
+        //-       img(src="../../files/features/image.png" style="right: 0; height: 350px;")
+      
+  section#feature-bottom
+    .container
+      a.prev.white(href="/features/ai-score/ai-score.html") A.I. based scoring
+      .divider
+      a.next.white(href="/features/q-lib/q-lib.html") Question library    
+      
+include ../../includes/footer.jade
