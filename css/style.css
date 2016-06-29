@@ -1401,6 +1401,7 @@ body.feature .feature-header a {
   position: relative;
   transition: 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 body.feature .feature-header a.prev,
 body.feature .feature-header a.next {
@@ -1443,7 +1444,7 @@ body.feature .feature-header a.next {
   text-align: left;
 }
 body.feature .feature-header a.next:hover {
-  transform: translate3d(-20px, 0px, 0px) scale(1.1);
+  transform: translate3d(-20px, 0px, 0px);
 }
 body.feature .feature-header a.next::before {
   float: right;
@@ -1456,13 +1457,13 @@ body.feature .feature-header a.next::after {
 body.feature .feature-header.feature-header-fixed {
   width: 100%;
   position: fixed;
-  background: #353538;
+  background: rgba(11, 11, 14, 0.9);
   top: 60px;
   left: 0;
+  z-index: 2;
 }
 body.feature .feature-header.feature-header-fixed .prev,
 body.feature .feature-header.feature-header-fixed .next {
-  background: rgba(0, 0, 0, 0.08);
   border: none;
 }
 body.feature .feature-header.feature-header-fixed h1 {
@@ -1473,13 +1474,94 @@ body.feature .content {
   background: white;
   border-radius: 8px;
   width: 100%;
-  height: 100%;
+  height: auto;
   margin-top: -100px;
+  margin-bottom: -50px;
 }
 body.feature .feature-section {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+body.feature .feature-section .features-container {
+  padding: 0 2em;
+}
+body.feature .feature-section .features-container .side-wrapper {
+  width: 350px;
+}
+body.feature #feature-bottom {
+  background: url("/files/sky-bg.png") no-repeat;
+  background-size: cover;
+  height: 350px;
+}
+body.feature #feature-bottom .container {
+  justify-content: center;
+  align-items: center;
+}
+body.feature #feature-bottom .container a {
+  text-decoration: none;
+  font-size: 26px;
+  display: block;
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+body.feature #feature-bottom .container a.prev,
+body.feature #feature-bottom .container a.next {
+  max-width: 400px;
+  text-align: right;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 200;
+}
+body.feature #feature-bottom .container a.prev:hover,
+body.feature #feature-bottom .container a.next:hover {
+  transform: translate3d(20px, 0px, 0px);
+}
+body.feature #feature-bottom .container a.prev::before,
+body.feature #feature-bottom .container a.next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  transform: rotate(180deg);
+  background-image: url("/files/icons/arrow-right-white.svg");
+}
+body.feature #feature-bottom .container a.prev::after,
+body.feature #feature-bottom .container a.next::after {
+  content: "Previous";
+  font-size: 14px;
+  opacity: 0.4;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+body.feature #feature-bottom .container a.next {
+  border-right: none;
+  text-align: left;
+}
+body.feature #feature-bottom .container a.next:hover {
+  transform: translate3d(-20px, 0px, 0px);
+}
+body.feature #feature-bottom .container a.next::before {
+  float: right;
+  transform: rotate(0deg);
+}
+body.feature #feature-bottom .container a.next::after {
+  left: 20px;
+  right: auto;
+}
+body.feature #feature-bottom .container .divider {
+  height: 60px;
+  width: 1px;
+  border-right: 1px solid gray;
+  border-right: 1px solid rgba(128, 128, 128, 0.22);
+  margin: 0 40px;
 }
 body.pricing #pricing-cover {
   height: 400px;
@@ -1705,13 +1787,17 @@ body.employer #intro .container h1 {
 body.employer #intro .container .values-container {
   display: flex;
   flex-direction: row;
-  padding-top: 80px;
+  padding-top: 120px;
 }
 body.employer #intro .container .values-container .value {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 140px;
+  text-align: center;
+}
+body.employer #intro .container .values-container .value .value-img {
+  height: 100px;
 }
 body.employer #intro .container .values-container .value h2 {
   margin-bottom: 0px;
@@ -1724,12 +1810,24 @@ body.employer #intro .container .values-container .value.first {
   padding-right: 50px;
   border-right: 1px solid rgba(128, 128, 128, 0.13);
 }
+body.employer #intro .container .values-container .value.first img {
+  height: 50px;
+  margin-top: -15px;
+}
 body.employer #intro .container .values-container .value.second {
   padding: 0 50px;
+}
+body.employer #intro .container .values-container .value.second img {
+  height: 27px;
+  margin-bottom: 11px;
 }
 body.employer #intro .container .values-container .value.third {
   padding-left: 50px;
   border-left: 1px solid rgba(128, 128, 128, 0.13);
+}
+body.employer #intro .container .values-container .value.third img {
+  height: 48px;
+  margin-top: -9px;
 }
 body.employer #source {
   height: 900px;
@@ -1748,6 +1846,24 @@ body.employer #assess {
 }
 body.employer #assess img {
   top: 10%;
+}
+body.employer #interview {
+  height: 900px;
+}
+body.employer #interview img {
+  padding-right: 70px;
+}
+body.employer #banner2 {
+  background: linear-gradient(rgba(30, 48, 99, 0.13), rgba(0, 0, 0, 0.3)), url("/files/placeholder4.png") no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+body.employer #banner2 .container {
+  justify-content: center;
+  align-items: center;
+}
+body.employer #banner2 .container h1 {
+  font-size: 50px;
 }
 /* === Media Queries === */
 /* Portrait and Landscape */
@@ -1906,7 +2022,7 @@ h2 {
   font-weight: 200;
   font-size: 30px;
   letter-spacing: 1.79px;
-  line-height: 48px;
+  line-height: 42px;
   margin: 0.3em 0em;
   max-width: 650px;
 }

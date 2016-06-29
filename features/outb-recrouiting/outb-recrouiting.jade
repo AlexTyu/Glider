@@ -1,0 +1,64 @@
+include ../../includes/head.jade
+
+body.feature(ng-app='Glider', ng-controller='LSD')
+
+  .main-header.employer.menu-minimized
+    include ../../includes/header.jade
+
+  section#feature-cover
+      .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
+        .container
+          a.prev.white(href="/features/inb-recruiting/inb-recrouiting.html") Inbound Recruiting
+          h1.white.center Outbound Recruiting
+          a.next.white(href="/features/assesments/live-assesment.html") Outbound recruiting
+        
+      
+  .content-wrapper
+    .container
+      .content
+        .feature-section()
+          h2.center(style="padding: 70px 30px;") Reach out to passive candidates.
+    
+        .feature-section.image-bg-outb(style="background: rgba(0,0,0,0.04); height: 450px;")
+          .container.image-at-left.features-container
+            .side-wrapper
+              .side-content
+                h2 Turbocharge your outbound recruiting
+                p.sub Target passive candidates by creating easy to read web and mobile friendly company pages and job posting that invited passive candidates could view from any device.  Ask them to apply  for a job by sending one or more candidates an invite with the click of a mouse.  
+            .image.image-center
+              img(src="../../files/features/image.png" style="padding-right:40px; left:0;")
+          
+        //- .feature-section(style="height: 600px;")
+        //-   .container.reverse.features-container
+        //-     .side-wrapper
+        //-       .side-content
+        //-         h2 Accept candidates from your website
+        //-         p.sub Get candidates who apply on your website onto Glider where you have all your candidates in one place.  
+        //-     .image.image-center
+        //-       img(src="../../files/features/placeholder.png" style="right: -2em; top:10%; height: 400px;")
+              
+        //- .feature-section(style="height: 500px;")
+        //-   .container.image-at-left.features-container
+        //-     .side-wrapper
+        //-       .side-content
+        //-         h2 Turbocharge your outbound recruiting
+        //-         p.sub Target passive candidates by creating easy to read web and mobile friendly company pages and job posting that invited passive candidates could view from any device.  Ask them to apply  for a job by sending one or more candidates an invite with the click of a mouse.   
+        //-     .image.image-center
+        //-       img(src="../../files/features/image.png" style="left: -2em; height: 350px;")
+              
+        .feature-section(style="height: 620px;")
+          .container.reverse.features-container
+            .side-wrapper
+              .side-content
+                h2 Zero-in on interested passive candidates
+                p.sub Glider gives you an engagement score for each invited  candidate based on the time they spent reviewing your invitation and the number of pages they browsed. You could make judicious use of your time by tailoring your subsequent follow up strategy based on the engagement score.  
+            .image.image-center
+              img(src="../../files/features/image.png" style="right: 0; height: 350px;")
+      
+  section#feature-bottom
+    .container
+      a.prev.white(href="/features/inb-recruiting/inb-recrouiting.html") Inbound Recruiting
+      .divider
+      a.next.white(href="/features/assesments/live-assesment.html") Outbound recruiting    
+      
+include ../../includes/footer.jade

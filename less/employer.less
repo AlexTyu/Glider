@@ -20,14 +20,18 @@ body.employer{
       .values-container{
         display: flex;
         flex-direction: row;
-        padding-top: 80px;
+        padding-top: 120px;
 
         .value{
           flex-grow: 1;
           display: flex;
           flex-direction: column;
-          height: 200px;
-          //text-align: center;
+          height: 140px;
+          text-align: center;
+
+          .value-img{
+            height:100px;
+          }
 
           h2{
             margin-bottom: 0px;
@@ -41,15 +45,30 @@ body.employer{
           &.first{
             padding-right: 50px;
             border-right: 1px solid rgba(128, 128, 128, 0.13);
+
+            img{
+              height: 50px;
+              margin-top: -15px;
+            }
           }
 
           &.second{
             padding: 0 50px;
+
+            img{
+              height: 27px;
+              margin-bottom: 11px;
+            }
           }
 
           &.third{
             padding-left: 50px;
             border-left: 1px solid rgba(128, 128, 128, 0.13);
+
+            img{
+              height: 48px;
+              margin-top: -9px;
+            }
           }
         }
       }
@@ -80,6 +99,42 @@ body.employer{
     img{
       top: 10%;
     }
+  }
+  #interview{
+    height: 900px;
 
+    img{
+      padding-right: 70px;
+    }
+  }
+
+  // #banner{
+  //   background: linear-gradient( rgba(30, 48, 99, 0.13), rgba(0, 0, 0, 0.3) ),url("/files/placeholder4.png") no-repeat;
+  //   background-size: cover;
+  //   height: 800px;
+  //
+  //   .container{
+  //     justify-content: center;
+  //     align-items: center;
+  //
+  //     h1{
+  //       font-size: 50px;
+  //     }
+  //   }
+  // }
+
+  #banner2{
+    background: linear-gradient( rgba(30, 48, 99, 0.13), rgba(0, 0, 0, 0.3) ),url("/files/placeholder4.png") no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    .container{
+      justify-content: center;
+      align-items: center;
+
+      h1{
+        font-size: 50px;
+      }
+    }
   }
 }

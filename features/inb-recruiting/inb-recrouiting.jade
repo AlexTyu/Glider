@@ -1,0 +1,64 @@
+include ../../includes/head.jade
+
+body.feature(ng-app='Glider', ng-controller='LSD')
+
+  .main-header.employer.menu-minimized
+    include ../../includes/header.jade
+
+  section#feature-cover
+      .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
+        .container
+          a.prev.white(href="/features/assesments/live-assesment.html") Social recruiting
+          h1.white.center Inbound Recruiting
+          a.next.white(href="/features/outb-recrouiting/outb-recrouiting.html") Outbound recruiting
+        
+      
+  .content-wrapper
+    .container
+      .content
+        .feature-section()
+          h2.center(style="padding: 70px 30px;") Get candidates from where they are.
+    
+        .feature-section(style="background: #d8dde4; height: 450px;")
+          .container.image-at-left.features-container
+            .side-wrapper
+              .side-content
+                h2 Accept candidates from job boards
+                p.sub Want to have all the resumes in one place? With Glider, you could drag and drop or upload the resumes you  receive from multiple job boards with ease and organize your hiring in one place.  
+            .image.image-center
+              img(src="../../files/features/source.png" style="padding-right:40px;")
+          
+        .feature-section(style="height: 700px;")
+          .container.reverse.features-container
+            .side-wrapper
+              .side-content
+                h2 Accept candidates from your website
+                p.sub Get candidates who apply on your website onto Glider where you have all your candidates in one place.  
+            .image.image-center
+              img(src="../../files/features/placeholder.png" style="right: -2em; top:10%; height: 400px;")
+              
+        .feature-section(style="height: 620px;")
+          .container.image-at-left.features-container
+            .side-wrapper
+              .side-content
+                h2 Source candidates from Glider
+                p.sub The millennial generation is already the biggest generation in the workforce. Get young and energetic millennial candidates who are already using Glider Candidate App.   
+            .image.image-center
+              img(src="../../files/features/image.png" style="left: -2em; height: 350px;")
+              
+        .feature-section(style="height: 620px;")
+          .container.reverse.features-container
+            .side-wrapper
+              .side-content
+                h2 Source archived candidates
+                p.sub Want to find candidates who have already shown interest in your company? Find suitable candidates for a job from the list of archived candidates who had applied for similar jobs at your company previously.  
+            .image.image-center
+              img(src="../../files/features/image.png" style="right: 0; height: 350px;")
+      
+  section#feature-bottom
+    .container
+      a.prev.white(href="/features/assesments/live-assesment.html") Social recruiting
+      .divider
+      a.next.white(href="/features/assesments/live-assesment.html") Outbound recruiting    
+      
+include ../../includes/footer.jade

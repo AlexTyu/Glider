@@ -1,0 +1,31 @@
+include ../../includes/head.jade
+
+body.feature(ng-app='Glider', ng-controller='LSD')
+
+  .main-header.employer.menu-minimized
+    include ../../includes/header.jade
+
+  section#feature-cover
+      .feature-header.flex-justify-center(scroll id="page" ng-class="{'feature-header-fixed':boolChangeClass}")
+        .container
+          a.prev.white Ai Pre-evaluation algoryhm
+          h1.white.center Live Assesment
+          a.next.white Online interview
+        
+      
+  .content-wrapper
+    .container
+      .content
+        .feature-section()
+          h2.center(style="padding: 70px 30px;") We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific.
+    
+        .feature-section(style="background: #14263A; height: 400px;")
+          .container.image-at-left
+            .side-wrapper
+              .side-content
+                h2.white Live codindg interview
+                p.sub.white We’re combining multy-topic assessement to get comprehensive picture of each candindate and understand his compentensy for specific position.  
+            .image
+              img(src="../../files/features/coding.png" )
+          
+    
