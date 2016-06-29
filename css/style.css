@@ -156,10 +156,10 @@
 }
 .header-wrapper .megamenu {
   display: flex;
-  height: 0px;
+  height: 100%;
   width: 100%;
   z-index: -1;
-  transition: 0.2s cubic-bezier(0.65, 0.01, 0.32, 1);
+  transition: 0.3s cubic-bezier(0.65, 0.01, 0.32, 1);
   overflow: hidden;
   justify-content: center;
   pointer-events: none;
@@ -223,7 +223,7 @@
 }
 .header-wrapper.megamenu-active {
   background: black;
-  height: 330px !important;
+  height: 500px !important;
 }
 .header-wrapper.megamenu-active a.mega-link {
   opacity: 1;
@@ -234,8 +234,8 @@
   transform: rotate(0deg);
 }
 .header-wrapper.megamenu-active .megamenu {
-  height: 100%;
   pointer-events: all;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 }
 .header-wrapper.megamenu-active .megamenu .links-group.first {
   animation-name: slide-down;
