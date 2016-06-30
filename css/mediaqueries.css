@@ -1,5 +1,4 @@
 /* === Media Queries === */
-/* ----------- Tablet ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-width: 0px) and (max-width: 780px) {
   #cover .side-wrapper {
@@ -10,7 +9,11 @@
   }
   .container,
   .container.image-at-left {
-    flex-direction: column;
+    flex-direction: column !important;
+  }
+  .container {
+    width: auto !important;
+    flex-grow: 1 !important;
   }
   .container .image .hero-image {
     height: 100%;
@@ -25,8 +28,67 @@
     justify-content: center;
     text-align: center;
   }
-  .pricing-section.tall {
+  body.pricing .card-container {
+    flex-direction: column;
+  }
+  body.pricing .card-container .pricing-section .pricing-card {
+    margin-top: 0px;
+  }
+  body.pricing .card-container .pricing-section .pricing-card.frst {
+    margin-top: -50px;
+  }
+  body.pricing .card-container .pricing-section .pricing-card.pro {
+    margin-top: 0px;
+  }
+  body.pricing .card-container .pricing-section .pricing-features {
+    margin-top: 20px;
+  }
+  body.pricing .card-container .pricing-section .pricing-features ul li.line {
+    display: none;
+  }
+  body.pricing .card-container .pricing-section.tall {
     margin-left: 0px;
     margin-right: 0px;
+  }
+  body.pricing .card-container .pricing-section.tall p {
+    margin-bottom: 0px;
+  }
+  .faq-container .faq-top .side-wrapper {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .faq-container .faq-top .side-wrapper .side-content .apps {
+    justify-content: center;
+  }
+  .faq-container .faq-top .image {
+    display: none;
+  }
+  .faq-container .faq-bottom .title {
+    padding: 2em !important;
+    margin-top: 40px !important;
+  }
+  .faq-container .faq-bottom .wrap-container {
+    flex-direction: column !important;
+    padding: 0 2em !important;
+  }
+  .faq-container .faq-bottom .wrap-container .text.left {
+    padding-right: 0px !important;
+  }
+  .faq-container .faq-bottom .wrap-container .text.right {
+    padding-left: 0px !important;
+  }
+  #feature-cover .container {
+    flex-direction: row !important;
+  }
+  #feature-cover a.prev,
+  #feature-cover a.next {
+    width: 40px;
+    padding: 0;
+    color: transparent;
+    padding-top: 20px;
+    max-height: 40px;
+  }
+  #feature-cover a::after {
+    display: none;
   }
 }

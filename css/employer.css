@@ -1,12 +1,95 @@
 /* Employer page only */
 body.employer #cover {
-  height: 700px;
+  height: 75vh;
   background: #1a2437;
 }
-body.employer #engage {
-  height: 720px;
+body.employer #intro {
+  height: 600px;
 }
-body.employer #assesment {
-  height: 840px;
-  background: white;
+body.employer #intro .container {
+  align-items: center;
+}
+body.employer #intro .container h1 {
+  margin-top: 120px;
+}
+body.employer #intro .container .values-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 120px;
+}
+body.employer #intro .container .values-container .value {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  text-align: center;
+}
+body.employer #intro .container .values-container .value .value-img {
+  height: 100px;
+}
+body.employer #intro .container .values-container .value h2 {
+  margin-bottom: 0px;
+}
+body.employer #intro .container .values-container .value p {
+  font-size: 18px;
+  line-height: 26px;
+}
+body.employer #intro .container .values-container .value.first {
+  padding-right: 50px;
+  border-right: 1px solid rgba(128, 128, 128, 0.13);
+}
+body.employer #intro .container .values-container .value.first img {
+  height: 50px;
+  margin-top: -15px;
+}
+body.employer #intro .container .values-container .value.second {
+  padding: 0 50px;
+}
+body.employer #intro .container .values-container .value.second img {
+  height: 27px;
+  margin-bottom: 11px;
+}
+body.employer #intro .container .values-container .value.third {
+  padding-left: 50px;
+  border-left: 1px solid rgba(128, 128, 128, 0.13);
+}
+body.employer #intro .container .values-container .value.third img {
+  height: 48px;
+  margin-top: -9px;
+}
+body.employer #source {
+  height: 900px;
+}
+body.employer #source img {
+  padding-left: 70px;
+}
+body.employer #shortlist {
+  height: 900px;
+}
+body.employer #shortlist img {
+  padding-right: 70px;
+}
+body.employer #assess {
+  height: 900px;
+}
+body.employer #assess img {
+  top: 10%;
+}
+body.employer #interview {
+  height: 900px;
+}
+body.employer #interview img {
+  padding-right: 70px;
+}
+body.employer #banner2 {
+  background: linear-gradient(rgba(30, 48, 99, 0.13), rgba(0, 0, 0, 0.3)), url("/files/placeholder4.png") no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+body.employer #banner2 .container {
+  justify-content: center;
+  align-items: center;
+}
+body.employer #banner2 .container h1 {
+  font-size: 50px;
 }

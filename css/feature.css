@@ -1,0 +1,190 @@
+body.feature #feature-cover {
+  height: 380px;
+  background-image: url("/files/sky-bg.png");
+  background-size: cover;
+}
+body.feature .feature-header {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  transition: 0.3s ease;
+  width: 100%;
+}
+body.feature .feature-header .container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+body.feature .feature-header h1 {
+  transition: 0.3s ease-out;
+}
+body.feature .feature-header a {
+  font-size: 20px;
+  display: block;
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+body.feature .feature-header a.prev,
+body.feature .feature-header a.next {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  max-width: 200px;
+  text-align: right;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 300;
+}
+body.feature .feature-header a.prev:hover,
+body.feature .feature-header a.next:hover {
+  transform: translate3d(20px, 0px, 0px);
+}
+body.feature .feature-header a.prev::before,
+body.feature .feature-header a.next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  transform: rotate(180deg);
+  background-image: url("/files/icons/arrow-right-white.svg");
+}
+body.feature .feature-header a.prev::after,
+body.feature .feature-header a.next::after {
+  content: "Previous";
+  font-size: 14px;
+  opacity: 0.6;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+body.feature .feature-header a.next {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: none;
+  text-align: left;
+}
+body.feature .feature-header a.next:hover {
+  transform: translate3d(-20px, 0px, 0px);
+}
+body.feature .feature-header a.next::before {
+  float: right;
+  transform: rotate(0deg);
+}
+body.feature .feature-header a.next::after {
+  left: 20px;
+  right: auto;
+  content: "Next";
+}
+body.feature .feature-header.feature-header-fixed {
+  width: 100%;
+  position: fixed;
+  background: rgba(11, 11, 14, 0.9);
+  top: 60px;
+  left: 0;
+  z-index: 2;
+}
+body.feature .feature-header.feature-header-fixed .prev,
+body.feature .feature-header.feature-header-fixed .next {
+  border: none;
+}
+body.feature .feature-header.feature-header-fixed h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+body.feature .content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin-top: -100px;
+  margin-bottom: -50px;
+}
+body.feature .feature-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body.feature .feature-section .features-container {
+  padding: 0 2em;
+}
+body.feature .feature-section .features-container .side-wrapper {
+  width: 350px;
+}
+body.feature #feature-bottom {
+  background: url("/files/sky-bg.png") no-repeat;
+  background-size: cover;
+  height: 350px;
+}
+body.feature #feature-bottom .container {
+  justify-content: center;
+  align-items: center;
+}
+body.feature #feature-bottom .container a {
+  text-decoration: none;
+  font-size: 26px;
+  display: block;
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+body.feature #feature-bottom .container a.prev,
+body.feature #feature-bottom .container a.next {
+  max-width: 400px;
+  text-align: right;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  font-weight: 200;
+}
+body.feature #feature-bottom .container a.prev:hover,
+body.feature #feature-bottom .container a.next:hover {
+  transform: translate3d(20px, 0px, 0px);
+}
+body.feature #feature-bottom .container a.prev::before,
+body.feature #feature-bottom .container a.next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  transform: rotate(180deg);
+  background-image: url("/files/icons/arrow-right-white.svg");
+}
+body.feature #feature-bottom .container a.prev::after,
+body.feature #feature-bottom .container a.next::after {
+  content: "Previous";
+  font-size: 14px;
+  opacity: 0.4;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+body.feature #feature-bottom .container a.next {
+  border-right: none;
+  text-align: left;
+}
+body.feature #feature-bottom .container a.next:hover {
+  transform: translate3d(-20px, 0px, 0px);
+}
+body.feature #feature-bottom .container a.next::before {
+  float: right;
+  transform: rotate(0deg);
+}
+body.feature #feature-bottom .container a.next::after {
+  left: 20px;
+  right: auto;
+}
+body.feature #feature-bottom .container .divider {
+  height: 60px;
+  width: 1px;
+  border-right: 1px solid gray;
+  border-right: 1px solid rgba(128, 128, 128, 0.22);
+  margin: 0 40px;
+}

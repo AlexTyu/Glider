@@ -1,6 +1,165 @@
-footer {
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #201f1f;
-  background-image: radial-gradient(49% 120%, rgba(255, 255, 255, 0.01) 20%, rgba(0, 0, 0, 0.01) 100%);
-  width: 1200px;
-  height: 474px;
+  width: 100%;
+  height: auto;
+}
+.footer-wrapper .footer-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 85px;
+}
+.footer-wrapper .footer-top .button {
+  padding: 0.8em 2.5em 0.7em 2.5em;
+}
+.footer-wrapper .footer-top a.logo {
+  display: block;
+  width: 160px;
+  transition: 0.3s cubic-bezier(0.65, 0.01, 0.32, 1);
+}
+.footer-wrapper .footer-top a.logo .name {
+  opacity: 0.4;
+  width: 90px;
+  padding-top: 20px;
+  margin-right: 20px;
+  float: left;
+  transition: 0.3s cubic-bezier(0.65, 0.01, 0.32, 1);
+}
+.footer-wrapper .footer-top a.logo .symbol {
+  height: 50px;
+  float: right;
+  transition: 0.3s cubic-bezier(0.65, 0.01, 0.32, 1);
+}
+.footer-wrapper .footer-top h2 {
+  margin-top: 1.2em;
+  font-weight: 200;
+  font-size: 38px;
+  margin-bottom: 1.2em;
+}
+.footer-wrapper .footer-top span {
+  margin-top: 10px;
+  color: gray;
+  font-size: 14px;
+}
+.footer-wrapper .footer-top span a {
+  text-decoration: none;
+  color: #2893f9;
+}
+.footer-wrapper .footer-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  margin-top: 3em;
+}
+.footer-wrapper .footer-links .links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  order: 2;
+}
+.footer-wrapper .footer-links .links .title {
+  display: block;
+  height: 20px;
+  margin-bottom: 6px;
+}
+.footer-wrapper .footer-links .links .footer-features {
+  flex-grow: 6;
+  display: flex;
+}
+.footer-wrapper .footer-links .links .footer-features .first-column,
+.footer-wrapper .footer-links .links .footer-features .second-column,
+.footer-wrapper .footer-links .links .footer-features .third-column {
+  flex-basis: 33%;
+}
+.footer-wrapper .footer-links .links .footer-company {
+  display: flex;
+  flex-grow: 4;
+}
+.footer-wrapper .footer-links .links .footer-company .company-info,
+.footer-wrapper .footer-links .links .footer-company .company-legal {
+  flex-basis: 50%;
+}
+.footer-wrapper .footer-links .links .footer-features,
+.footer-wrapper .footer-links .links .footer-company {
+  flex-shrink: 1;
+}
+.footer-wrapper .footer-links .links .footer-features p,
+.footer-wrapper .footer-links .links .footer-company p {
+  padding: 0 10px;
+  color: gray;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer-wrapper .footer-links .links .footer-features ul,
+.footer-wrapper .footer-links .links .footer-company ul {
+  list-style: none;
+  padding: 0 10px;
+  font-size: 14px;
+  margin: 0px;
+}
+.footer-wrapper .footer-links .links .footer-features ul a,
+.footer-wrapper .footer-links .links .footer-company ul a {
+  text-decoration: none;
+  color: gray;
+  opacity: 0.3;
+}
+.footer-wrapper .copy {
+  display: flex;
+  flex-grow: 1;
+  order: 3;
+  margin-bottom: 10px;
+}
+.footer-wrapper .copy p {
+  color: gray;
+  opacity: 0.2;
+  font-size: 13px;
+  padding-top: 4px;
+}
+.footer-wrapper .copy .social {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-wrapper .copy .social a {
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0px 5px;
+  opacity: 0.2;
+}
+.footer-wrapper .copy .social a.tw {
+  background-image: url(/files/icons/tw.svg);
+}
+.footer-wrapper .copy .social a.in {
+  background-image: url(/files/icons/in.svg);
+}
+.footer-wrapper .copy .social a.fb {
+  background-image: url(/files/icons/fb.svg);
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  .footer-wrapper .footer-top h2 {
+    text-align: center;
+  }
+  .footer-wrapper .footer-links .links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-wrapper .footer-links .links .footer-features {
+    width: 100%;
+    align-self: flex-start;
+  }
+  .footer-wrapper .footer-links .links .footer-company {
+    width: 100%;
+    margin: 25px 0;
+    align-self: flex-start;
+  }
+  .footer-wrapper .footer-links .links .footer-company .company-info,
+  .footer-wrapper .footer-links .links .footer-company .company-legal {
+    flex-basis: 33%;
+  }
 }
