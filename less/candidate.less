@@ -2,10 +2,11 @@
 
 body.candidate{
 
-  #candidate{
+  #candidate-top{
     background-image: url("/files/sky-bg.png");
     background-size: cover;
     background-position: center;
+    height: 90vh;
   }
 
   .skew-toggle{
@@ -696,6 +697,108 @@ body.candidate{
 
   }
 }
+
+#candidate-intro{
+  height: 400px;
+  background: white;
+
+  .container{
+    text-align: center;
+
+    h1{
+      line-height: 54px;
+    }
+  }
+}
+
+#candidate-features{
+  height: 850px;
+  background: white;
+
+  .container{
+
+    img{
+      height: 640px;
+      margin-top: 40px;
+    }
+
+    .simulator-steps{
+      display: flex;
+      flex-direction: column;
+      width:300px;
+    }
+  }
+
+}
+
+#candidate-app{
+  height: 650px;
+  background: url("/files/sky-bg.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  .icon{
+    width: 140px;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.24);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  hr{
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #fff;
+    opacity: .2;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .app-icons{
+    a.ios{
+      display: block;
+      background: url(//res.cloudinary.com/glider/image/upload/glider/applestore.png);
+      width: 165px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 60px;
+      float: left;
+      border-radius: 0;
+    }
+
+    a.android{
+      display: block;
+      background: url(//res.cloudinary.com/glider/image/upload/glider/googleplay.png);
+      width: 165px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 60px;
+      float: left;
+      border-radius: 0;
+    }
+  }
+}
+
+#candidate-employer{
+  height: 300px;
+  background:#201f1f;
+  text-align: center;
+
+  .button{
+    margin-top: 15px;
+  }
+}
+
 
 /* === Media Queries === */
 

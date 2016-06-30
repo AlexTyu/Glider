@@ -6,7 +6,7 @@ body.candidate(ng-app='Glider' ng-controller='LSD')
     .main-header.candidate(scroll id="page" ng-class="{'menu-minimized':boolChangeClass}")
       include ./includes/header.jade    
       
-    section#candidate
+    section#candidate-top
       .container.flex-row-reverse
         .side-wrapper
           .side-content
@@ -47,3 +47,39 @@ body.candidate(ng-app='Glider' ng-controller='LSD')
                   .button Yes
                   .button No
                   .button I'll consider that
+                  
+    section#candidate-intro
+      .container
+        h1 Glider is an artificial intelligence powered tool to get jobs that you will love
+      
+    section#candidate-features(style="background: #f5f6f7;")
+      .container.flex-justify-center.flex-row-reverse
+        .iphone
+          img(src="/files/iphone-front.png")
+        .simulator-steps.pad-right  
+          .step.first
+            h2 Begins with you
+            p Answer simple questions about your background, goals and preferences. Glider recommends.
+          .step.second
+            h2 Begins with you
+            p Answer simple questions about your background, goals and preferences. Glider recommends.
+          .step.third
+            h2 Begins with you
+            p Answer simple questions about your background, goals and preferences. Glider recommends.
+    
+    section#candidate-app
+      .container.flex-justify-center.flex-column
+        .icon
+          img(src="//res.cloudinary.com/glider/image/upload/glider/logo.svg")
+        hr
+        h1.white Use Glider for Free! Forever.
+        hr
+        .app-icons
+          a.android(href='https://play.google.com/store/apps/details?id=com.glider')
+          a.ios
+    section#candidate-employer
+      .container.flex-column.flex-justify-center
+        h1.white Looking to hire great talent?
+        .button.start Try Glider for Companies 
+    
+    
