@@ -1,0 +1,146 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project</title>
+  <link rel="stylesheet" href="../../css/style.css"/>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+  <script src="../../js/simulator.js"></script>
+  <script src="../../js/main.js"></script>
+  <script type="text/javascript" src="//fast.fonts.net/jsapi/149c8a1a-2b2d-43f1-a389-5a9ea8aa112b.js"></script>
+</head>
+<body ng-app="Glider" ng-controller="LSD" class="feature">
+  <div class="main-header employer menu-minimized">
+    <div ng-class="{'megamenu-active' : MegamenuActive, 'menu-active' : MenuActive}" class="header-wrapper"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
+      <div class="header-links candidate"><a href="/employer">Hiring?</a></div>
+      <div class="header-links employer"><a ng-click="activeMegaMenu()" ng-mouseenter="activeMegaMenu()" class="link01 mega-link">Features</a><a href="/Pricing" class="link02">Pricing</a><a href="/" class="link03">For Candidate</a>
+        <div class="header-buttons"><a class="button signup link04">Sign up</a><a class="button login link04">Login</a></div>
+      </div>
+      <div ng-click="activeMenu(); MegamenuActive = false" class="menu-button"></div>
+      <div ng-mouseleave="activeMegaMenu()" class="megamenu">
+        <div class="container"><a ng-click="activeMegaMenu()" class="back">Back</a>
+          <div class="links-group first">
+            <h3>Source</h3><a href="/features/inb-recruiting/inb-recrouiting.html">Inbound recruiting</a><a href="/features/outb-recrouiting/outb-recrouiting.html">Outbound recruiting</a><a href="/features/mobile-outreach/mobile-outreach.html">Mobile friendly outreach</a>
+          </div>
+          <div class="links-group second">
+            <h3>Shortlist</h3><a href="/features/parsing/parsing.html">Resume parsing</a><a href="/features/ai-score/ai-score.html">A.I. based scoring</a><a href="/features/workflow/workflow.html">Intelligent workflows</a>
+          </div>
+          <div class="links-group third">
+            <h3>Assess</h3><a href="/features/q-lib/q-lib.html">Question library</a><a href="/features/q-auth/q-auth.html">Quiz authoring</a><a href="/features/m-d-testing/m-d-testing.html">Multi-domain testing</a><a href="/features/auto-g/auto-g.html">Auto grading</a><a href="/features/adaptive-ass/adaptive-ass.html">Adaptive assessments</a><a href="/features/proct/proct.html">Proctoring</a><a href="/features/pl-detect/pl-detect.html">Plagiarism detection</a><a href="/features/ats/ats.html">ATS integration</a>
+          </div>
+          <div class="links-group forth">
+            <h3>Interview</h3><a href="/features/v-interview/v-interview.html">Video interviews</a><a href="/features/scheduling/scheduling.html">Scheduling</a><a href="/features/s-share/s-share.html">Screen and code share</a><a href="/features/social-recr/social-recr.html">Social recruiting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="feature-cover">
+    <div scroll="scroll" id="page" ng-class="{'feature-header-fixed':boolChangeClass}" class="feature-header flex-justify-center">
+      <div class="container"><a href="/features/pl-detect/pl-detect.html" class="prev white">Plagiarism detection</a>
+        <h1 class="white center">ATS integration</h1><a href="/features/v-interview/v-interview.html" class="next white">Video interviews</a>
+      </div>
+    </div>
+  </section>
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="content">
+        <div class="feature-section">
+          <h2 style="padding: 70px 30px;" class="center">Integrate Glider with your ATS</h2>
+        </div>
+        <div style="background: rgba(0,0,0,0.04); height: 450px;" class="feature-section">
+          <div class="container image-at-left features-container">
+            <div class="side-wrapper">
+              <div class="side-content">
+                <h2>ATS integration</h2>
+                <p class="sub">What if you have your own application tracking system (ATS) and would like to use only the assessments from Glider? Glider is built in a flexible and modular manner and that enables the assessments to be used with Glider or integrated with an ATS.    </p>
+              </div>
+            </div>
+            <div class="image image-center"><img src="../../files/features/image.png" style="left: -2em; height: 350px;"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<div class="footer-wrapper">
+  <div class="container flex-column">
+    <div class="footer-top flex-1"><a href="/employer" class="logo"><img src="/files/name.svg" class="name"/><img src="/files/logo.svg" class="symbol"/></a>
+      <h2 class="white">Best hiring solution for your business.</h2>
+      <div class="button start">Start For Free</div><span>
+         
+        or <a href="/pricing">see pro options</a></span>
+    </div>
+    <div class="footer-links">   
+      <div class="links">
+        <div class="footer-features">
+          <div class="first-column">
+            <div class="title">
+              <p>FEATURES</p>
+            </div>
+            <div class="list">
+              <ul>
+                <li><a href="/features/assesments/live-assesment.html">Inbound recruiting</a></li>
+                <li> <a href="/features/assesments/live-assesment.html">Outbound recruiting</a></li>
+                <li><a href="/features/assesments/live-assesment.html">Mobile friendly outreach</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="second-column">
+            <div class="title"></div>
+            <div class="list">
+              <ul>
+                <li><a href="/features/assesments/live-assesment.html">Resume parsing</a></li>
+                <li> <a href="/features/assesments/live-assesment.html">Artificial intelligence based scoring</a></li>
+                <li><a href="/features/assesments/live-assesment.html">Intelligent workflows</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="third-column">
+            <div class="title"></div>
+            <div class="list">
+              <ul>
+                <li><a href="/features/assesments/live-assesment.html">Question library</a></li>
+                <li> <a href="/features/assesments/live-assesment.html">Initation system</a></li>
+                <li><a href="/features/assesments/live-assesment.html">Adaptive assessments</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-company">
+          <div class="company-info">
+            <div class="title">
+              <p>COMPANY</p>
+            </div>
+            <div class="list"> 
+              <ul>
+                <li><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a></li>
+                <li> <a href="/features/assesments/live-assesment.html">Initation system</a></li>
+                <li><a href="/features/assesments/live-assesment.html">Auto grading</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-legal">
+            <div class="title">
+              <p>SUPPORT</p>
+            </div>
+            <div class="list">
+              <ul>
+                <li><a href="/features/assesments/live-assesment.html">Web-platforms sourcing</a></li>
+                <li> <a href="/features/assesments/live-assesment.html">Initation system</a></li>
+                <li><a href="/features/assesments/live-assesment.html">Branding</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy"> 
+      <p class="flex-1">©2016  Glider Inc.</p>
+      <div class="social flex-1"><a href="/features/assesments/live-assesment.html" class="fb"></a><a href="/features/assesments/live-assesment.html" class="in"></a><a href="/features/assesments/live-assesment.html" class="tw"></a></div>
+    </div>
+  </div>
+</div>
